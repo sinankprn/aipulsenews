@@ -81,6 +81,8 @@ REQUIREMENTS:
 7. Use subheadings to break up the content
 8. End with implications or what to watch for next
 9. Do NOT include the headline in the body - just the article content
+10. Cite sources where appropriate
+11. Do not use emdashes (—), use commas (,) instead.
 
 Write the article now:"""
 
