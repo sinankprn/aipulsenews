@@ -10,7 +10,25 @@ author:
   name: "Sinan Koparan"
   url: "https://sinankprn.com"
   github: "sinankprn"
+  twitter: "sinankprn"
+  linkedin: "sinankprn"
   bio: "PhD Candidate in Sports Data Science & AI"
+  full_bio: "Sinan Koparan is a PhD Candidate specializing in Sports Data Science and Artificial Intelligence. With expertise in machine learning, LLMs, and data-driven sports analytics, he bridges the gap between cutting-edge AI research and practical applications."
+  expertise:
+    - "Artificial Intelligence"
+    - "Machine Learning"
+    - "Sports Data Science"
+    - "Large Language Models"
+  image: "/assets/images/sinan-koparan.png"
+
+# SEO Keywords
+keywords:
+  - artificial intelligence news
+  - AI breakthroughs
+  - LLM news
+  - AI trends 2026
+  - machine learning updates
+enable_search_action: true
 
 # Build Settings
 markdown: kramdown
