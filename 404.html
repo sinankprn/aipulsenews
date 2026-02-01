@@ -1,0 +1,171 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist or has been moved."
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <div class="error-actions">
+      <a href="{{ '/' | relative_url }}" class="error-btn primary">
+        <span aria-hidden="true">&#8592;</span> Back to Home
+      </a>
+      <a href="{{ '/search/' | relative_url }}" class="error-btn secondary">
+        <span aria-hidden="true">&#128269;</span> Search Articles
+      </a>
+    </div>
+  </div>
+
+  <div class="error-suggestions">
+    <h2>Latest Articles</h2>
+    <div class="error-posts">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" class="error-post-card">
+        <h3>{{ post.title }}</h3>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+.error-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+.error-content {
+  background: var(--card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.error-code {
+  font-size: clamp(4rem, 15vw, 8rem);
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.error-content h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--dark);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.error-content p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-xl) 0;
+}
+
+.error-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  min-height: 48px;
+}
+
+.error-btn.primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.error-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+  color: white;
+}
+
+.error-btn.secondary {
+  background: var(--bg-subtle);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.error-btn.secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.error-suggestions {
+  background: var(--card);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.error-suggestions h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.error-posts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.error-post-card {
+  display: block;
+  padding: var(--space-md);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.error-post-card:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.error-post-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.error-post-card:hover h3 {
+  color: var(--primary);
+}
+
+.error-post-card time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+</style>
