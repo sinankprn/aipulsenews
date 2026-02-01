@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div class="progress-bar" aria-hidden="true"></div>
+
 <article class="post" itemscope itemtype="https://schema.org/NewsArticle">
   <meta itemprop="mainEntityOfPage" content="{{ page.url | absolute_url }}">
 
@@ -22,24 +24,47 @@ layout: default
         <span aria-hidden="true">✍️</span> by <span itemprop="name">{{ page.author }}</span>
       </span>
       {% endif %}
-      {% if page.reading_time %}
+      {% assign words = content | number_of_words %}
+      {% assign reading_time = words | divided_by: 200 %}
+      {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
       <span aria-label="Reading time">
-        <span aria-hidden="true">⏱️</span> {{ page.reading_time }} min read
+        <span aria-hidden="true">⏱️</span> {{ reading_time }} min read
       </span>
-      {% endif %}
     </div>
     {% if page.tags.size > 0 %}
     <div class="post-tags" aria-label="Article tags">
       {% for tag in page.tags %}
-      <span class="tag">{{ tag }}</span>
+      <a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}" class="tag-link">
+        <span class="tag">{{ tag }}</span>
+      </a>
       {% endfor %}
     </div>
     {% endif %}
   </header>
 
+  {% if page.toc %}
+  <aside class="toc-wrapper" aria-label="Table of contents">
+    <button class="toc-toggle" aria-expanded="false" aria-controls="toc-content">
+      <span>Table of Contents</span>
+      <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+    <nav id="toc-content" class="toc-content" aria-label="Article sections">
+      <ul id="toc-list"></ul>
+    </nav>
+  </aside>
+  {% endif %}
+
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  {% include ad-unit.html slot="YOUR_AD_SLOT_1" format="auto" %}
+
+  {% include social-share.html %}
+
+  {% include related-posts.html %}
 
   <div class="author-box">
     <div class="author-avatar">
@@ -78,3 +103,8 @@ layout: default
 <nav class="post-nav" aria-label="Post navigation">
   <a href="{{ '/' | relative_url }}" aria-label="Return to all posts">&larr; Back to all posts</a>
 </nav>
+
+<script src="{{ '/assets/js/progress.js' | relative_url }}"></script>
+{% if page.toc %}
+<script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
+{% endif %}

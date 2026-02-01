@@ -16,6 +16,12 @@ author:
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 future: true
+excerpt_separator: "<!--more-->"
+
+# Kramdown settings for TOC
+kramdown:
+  toc_levels: 2..3
+  auto_ids: true
 
 # Plugins
 plugins:
@@ -43,6 +49,12 @@ defaults:
     values:
       layout: "post"
       author: "Sinan Koparan"
+
+# Google AdSense
+# Replace with your AdSense publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
+adsense:
+  enabled: false
+  publisher_id: "ca-pub-5814690967626535"
 
 # Exclude from build
 exclude:

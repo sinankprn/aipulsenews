@@ -1,0 +1,11 @@
+<aside class="toc-wrapper" aria-label="Table of contents">
+  <button class="toc-toggle" aria-expanded="false" aria-controls="toc-content">
+    <span>Table of Contents</span>
+    <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+  <nav id="toc-content" class="toc-content" aria-label="Article sections">
+    {{ content | toc_only }}
+  </nav>
+</aside>
