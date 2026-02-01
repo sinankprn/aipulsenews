@@ -2064,3 +2064,53 @@ button:focus-visible {
 .post-content .twitter-tweet-rendered {
   margin: var(--space-xl) auto !important;
 }
+
+/* ============================================
+   COPY LINK BUTTON
+   ============================================ */
+.copy-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: 32px;
+}
+
+.copy-link-btn:hover {
+  background: var(--bg-subtle);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.copy-link-btn:active {
+  transform: scale(0.97);
+}
+
+.copy-link-icon {
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   LAZY LOADING IMAGES
+   ============================================ */
+.post-content img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.post-content img[loading="lazy"] {
+  opacity: 0;
+}
+
+.post-content img.loaded,
+.post-content img:not([loading="lazy"]) {
+  opacity: 1;
+}

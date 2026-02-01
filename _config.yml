@@ -48,8 +48,8 @@ plugins:
   - jekyll-feed
 
 # SEO Defaults
-logo: /assets/images/logo.png
-image: /assets/images/social-card-default.png
+logo: /assets/images/icons/web-app-manifest-512x512.png
+image: /assets/images/icons/web-app-manifest-512x512.png
 twitter:
   username: sinankprn
   card: summary_large_image

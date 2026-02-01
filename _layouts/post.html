@@ -30,6 +30,10 @@ layout: default
       <span aria-label="Reading time">
         <span aria-hidden="true">⏱️</span> {{ reading_time }} min read
       </span>
+      <button class="copy-link-btn" data-url="{{ page.url | absolute_url }}" aria-label="Copy link to clipboard">
+        <span class="copy-link-icon" aria-hidden="true">&#128279;</span>
+        <span class="copy-link-text">Copy link</span>
+      </button>
     </div>
     {% if page.tags.size > 0 %}
     <div class="post-tags" aria-label="Article tags">
@@ -95,7 +99,7 @@ layout: default
   <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display:none;">
     <span itemprop="name">{{ site.title }}</span>
     <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-      <meta itemprop="url" content="{{ site.url | default: '' }}{{ site.baseurl }}/assets/logo.png">
+      <meta itemprop="url" content="{{ site.url | default: '' }}{{ site.baseurl }}/assets/images/icons/web-app-manifest-512x512.png">
     </div>
   </div>
 </article>
@@ -109,3 +113,21 @@ layout: default
 <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 {% endif %}
 <script async src="https://platform.twitter.com/widgets.js"></script>
+<script>
+// Copy link button
+document.querySelector('.copy-link-btn')?.addEventListener('click', function() {
+  const url = this.dataset.url;
+  const textEl = this.querySelector('.copy-link-text');
+  navigator.clipboard.writeText(url).then(() => {
+    textEl.textContent = 'Copied!';
+    setTimeout(() => { textEl.textContent = 'Copy link'; }, 2000);
+  });
+});
+
+// Lazy load images with fade-in
+document.querySelectorAll('.post-content img').forEach(img => {
+  img.setAttribute('loading', 'lazy');
+  img.addEventListener('load', () => img.classList.add('loaded'));
+  if (img.complete) img.classList.add('loaded');
+});
+</script>
