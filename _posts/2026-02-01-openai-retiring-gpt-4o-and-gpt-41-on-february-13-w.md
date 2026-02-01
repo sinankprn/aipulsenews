@@ -1,30 +1,35 @@
 ---
 author: Sinan Koparan
-date: '2026-02-01 18:49:33'
-description: OpenAI has officially set an expiration date for the models that defined
+date: "2026-02-01 18:49:33"
+description:
+  OpenAI has officially set an expiration date for the models that defined
   the current era of generative AI. On February 13, 2026, the company will retire
   several...
 layout: post
 sources:
-- https://openai.com/index/retiring-gpt-4o-and-older-models/
-- https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models
+  - https://openai.com/index/retiring-gpt-4o-and-older-models/
+  - https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models
 tags:
-- OpenAI
-- GPT
-- API
-- Developers
-- Breaking News
-title: OpenAI Retiring GPT-4o and GPT-4.1 on February 13 - What Developers Need to
-  Know
+  - OpenAI
+  - GPT
+  - API
+  - Developers
+  - Breaking News
+title: OpenAI Retiring GPT-4o and GPT-4.1 on February 13 - What Developers Need to Know
+image: "/assets/images/posts/openai-gpt-4o.png"
 ---
 
 OpenAI has officially set an expiration date for the models that defined the current era of generative AI. On February 13, 2026, the company will retire several prominent models from the ChatGPT interface, including GPT-4o, GPT-4.1, GPT-4.1 mini, and OpenAI o4-mini. Even more surprising for many in the industry is the inclusion of the recently released GPT-5 (Instant and Thinking) variants in this retirement wave.
 
 According to a recent announcement on the OpenAI blog, these changes are part of a strategic shift to consolidate the user base onto the more advanced GPT-5.2 framework. While the news specifically targets the ChatGPT interface, the implications for the broader developer ecosystem are significant.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Keep4o?src=hash&amp;ref_src=twsrc%5Etfw">#Keep4o</a> petition has surpassed 10,000 signatures!<br><br>​Your efforts matter. Every single voice counts. Please keep fighting. Please keep holding the line.<br><br>​GPT-4o remains irreplaceable.<br><br>Its architecture possesses unique capabilities in the humanities and social sciences. It… <a href="https://t.co/RXVWOvG3vO">https://t.co/RXVWOvG3vO</a> <a href="https://t.co/uzOGBD9wMF">pic.twitter.com/uzOGBD9wMF</a></p>&mdash; ji yu shun (@kexicheng) <a href="https://twitter.com/kexicheng/status/2017360725128388761?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### The Migration Timeline
 
 The February 13 deadline serves as a hard cutoff for the ChatGPT interface. After this date, any existing conversations or projects that rely on the deprecated models will automatically default to GPT-5.2. For developers who use ChatGPT as a prototyping environment, this means prompt engineering and workflow testing should transition to the GPT-5.2 environment immediately to ensure consistency.
+
+![future-timeline-framework](/assets/images/posts/timeline.png)
 
 Crucially, OpenAI has clarified in a support article that these models will continue to be available via the OpenAI API for the time being. The company stated that there are no changes to the API at this time and promised to provide advance notice before any future API retirements. However, history suggests that interface deprecations are often the first step toward full API sunsetting, making this an ideal time for development teams to begin their internal audits.
 
@@ -33,6 +38,8 @@ Crucially, OpenAI has clarified in a support article that these models will cont
 The retirement of GPT-4o is a particularly notable milestone. Despite being a flagship model, its usage has plummeted to just 0.1% of the daily user base as the majority of traffic has migrated to the GPT-5.2 architecture. OpenAI previously restored GPT-4o after a brief deprecation period following feedback from Plus and Pro users who preferred its specific conversational "warmth" and creative ideation capabilities.
 
 OpenAI notes that this feedback was instrumental in developing GPT-5.1 and GPT-5.2. The newer models now include granular controls for personality, style, and tone, allowing users to select "Friendly" or "Enthusiastic" modes. By baking these subjective qualities into the newer architecture, OpenAI believes the primary reason for maintaining older models has been addressed.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Keep4o?src=hash&amp;ref_src=twsrc%5Etfw">#Keep4o</a> petition has surpassed 10,000 signatures!<br><br>​Your efforts matter. Every single voice counts. Please keep fighting. Please keep holding the line.<br><br>​GPT-4o remains irreplaceable.<br><br>Its architecture possesses unique capabilities in the humanities and social sciences. It… <a href="https://t.co/RXVWOvG3vO">https://t.co/RXVWOvG3vO</a> <a href="https://t.co/uzOGBD9wMF">pic.twitter.com/uzOGBD9wMF</a></p>&mdash; ji yu shun (@kexicheng) <a href="https://twitter.com/kexicheng/status/2017360725128388761?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Impact on Production and API Strategy
 
