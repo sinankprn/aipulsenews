@@ -1943,73 +1943,89 @@ button:focus-visible {
    ============================================ */
 .footer-newsletter {
   width: 100%;
-  max-width: 400px;
+  max-width: 560px;
+}
+
+.footer-newsletter-inner {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-newsletter-text {
   text-align: center;
 }
 
 .footer-newsletter-label {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #fff;
-  margin: 0 0 var(--space-sm) 0;
+  margin: 0 0 var(--space-2xs) 0;
+}
+
+.footer-newsletter-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
 .footer-newsletter-form {
   display: flex;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .footer-newsletter-form input[type="email"] {
   flex: 1;
   padding: var(--space-sm) var(--space-md);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-family: inherit;
   min-width: 0;
   transition: all var(--transition-fast);
 }
 
 .footer-newsletter-form input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-newsletter-form input[type="email"]:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .footer-newsletter-form button {
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
   background: #fff;
-  color: var(--primary);
+  color: var(--primary-dark);
   border: none;
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  min-height: 44px;
 }
 
 .footer-newsletter-form button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-1px);
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .footer-newsletter-form button:active {
   transform: scale(0.98);
-}
-
-.footer-newsletter-note {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0;
 }
 
 .footer-legal {
@@ -2018,16 +2034,34 @@ button:focus-visible {
 
 .footer-legal a {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .footer-legal a:hover {
   color: #fff;
+  text-decoration: underline;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 600px) {
+  .footer-newsletter-inner {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-newsletter-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer-newsletter-form {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 599px) {
   .footer-newsletter-form {
     flex-direction: column;
   }
