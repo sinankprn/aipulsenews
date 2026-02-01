@@ -1,0 +1,54 @@
+# Site Settings
+title: "AI Pulse"
+description: "Daily AI news, breakthroughs, and insights curated for humans"
+url: "" # Set to your GitHub Pages URL: https://username.github.io
+baseurl: ""
+lang: en
+
+# Author
+author:
+  name: "Sinan Koparan"
+  url: "https://sinankprn.com"
+  github: "sinankprn"
+  bio: "PhD Candidate in Sports Data Science & AI"
+
+# Build Settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+future: true
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO Defaults
+logo: /assets/images/logo.png
+image: /assets/images/social-card-default.png
+twitter:
+  username: sinankprn
+  card: summary_large_image
+
+# Social Links
+social:
+  website: "https://sinankprn.com"
+  github: "https://github.com/sinankprn"
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Sinan Koparan"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - _content-queue/
+  - README.md
+  - "*.py"
