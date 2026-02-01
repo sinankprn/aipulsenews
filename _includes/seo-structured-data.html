@@ -1,13 +1,22 @@
+{% comment %}
+  SEO Structured Data for AI Pulse
+  - WebSite with SearchAction (homepage)
+  - NewsArticle with speakable (posts)
+  - BreadcrumbList (posts)
+  - Person (all pages)
+{% endcomment %}
+
+{% if page.layout == 'post' %}
+{% comment %} NewsArticle Schema for Posts {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {% if page.layout == 'post' %}
   "@type": "NewsArticle",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"
   },
-  "headline": "{{ page.title }}",
+  "headline": "{{ page.title | escape }}",
   "image": [
     {% if page.image %}
     "{{ page.image | absolute_url }}"
@@ -16,11 +25,18 @@
     {% endif %}
   ],
   "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "author": {
     "@type": "Person",
     "name": "{{ site.author.name }}",
-    "url": "{{ site.author.url }}"
+    "url": "{{ site.author.url }}",
+    {% if site.author.image %}"image": "{{ site.url }}{{ site.baseurl }}{{ site.author.image }}",{% endif %}
+    "sameAs": [
+      "{{ site.author.url }}"
+      {% if site.author.github %},"https://github.com/{{ site.author.github }}"{% endif %}
+      {% if site.author.twitter %},"https://twitter.com/{{ site.author.twitter }}"{% endif %}
+      {% if site.author.linkedin %},"https://linkedin.com/in/{{ site.author.linkedin }}"{% endif %}
+    ]
   },
   "publisher": {
     "@type": "Organization",
@@ -30,8 +46,58 @@
       "url": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png"
     }
   },
-  "description": "{{ page.description | strip_html | strip_newlines | escape }}"
-  {% else %}
+  "description": "{{ page.description | default: page.excerpt | strip_html | strip_newlines | escape | truncate: 160 }}",
+  "articleSection": "{% if page.tags.first %}{{ page.tags.first }}{% else %}AI News{% endif %}",
+  "isAccessibleForFree": true,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".post-title", ".post-content p:first-of-type"]
+  }
+}
+</script>
+
+{% comment %} BreadcrumbList Schema for Posts {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    }
+    {% if page.tags.first %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.tags.first }}",
+      "item": "{{ site.url }}{{ site.baseurl }}/tags/#{{ page.tags.first | slugify }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page.title | escape }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+    {% else %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.title | escape }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+    {% endif %}
+  ]
+}
+</script>
+
+{% else %}
+{% comment %} WebSite Schema with SearchAction for Non-Post Pages {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "{{ site.url }}{{ site.baseurl }}/",
   "name": "{{ site.title }}",
@@ -44,21 +110,41 @@
       "url": "{{ site.url }}{{ site.baseurl }}/assets/images/logo.png"
     }
   }
+  {% if site.enable_search_action %},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}{{ site.baseurl }}/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
   {% endif %}
 }
 </script>
+{% endif %}
 
+{% comment %} Person Schema (all pages) {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "{{ site.author.name }}",
   "url": "{{ site.author.url }}",
+  "description": "{{ site.author.full_bio | default: site.author.bio | escape }}",
+  {% if site.author.image %}"image": "{{ site.url }}{{ site.baseurl }}{{ site.author.image }}",{% endif %}
   "sameAs": [
-    "https://github.com/{{ site.author.github }}",
     "{{ site.author.url }}"
+    {% if site.author.github %},"https://github.com/{{ site.author.github }}"{% endif %}
+    {% if site.author.twitter %},"https://twitter.com/{{ site.author.twitter }}"{% endif %}
+    {% if site.author.linkedin %},"https://linkedin.com/in/{{ site.author.linkedin }}"{% endif %}
   ],
   "jobTitle": "{{ site.author.bio }}",
+  {% if site.author.expertise %}
+  "knowsAbout": [
+    {% for skill in site.author.expertise %}"{{ skill }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  {% endif %}
   "worksFor": {
     "@type": "Organization",
     "name": "{{ site.title }}"

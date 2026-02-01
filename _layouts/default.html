@@ -14,6 +14,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow">
   <meta name="author" content="{{ site.author.name }}">
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}, {% endif %}{% if site.keywords %}{{ site.keywords | join: ', ' }}{% else %}AI, artificial intelligence, machine learning{% endif %}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +49,7 @@
           <a href="{{ '/' | relative_url }}" {% if page.url=="/" %}aria-current="page" {% endif %}>Latest</a>
           <a href="{{ '/tags/' | relative_url }}" {% if page.url=="/tags/" %}aria-current="page" {% endif %}>Tags</a>
           <a href="{{ '/search/' | relative_url }}" {% if page.url=="/search/" %}aria-current="page" {% endif %}>Search</a>
+          <a href="{{ '/author/' | relative_url }}" {% if page.url=="/author/" %}aria-current="page" {% endif %}>About</a>
           <a href="{{ '/feed.xml' | relative_url }}" aria-label="Subscribe via RSS">RSS</a>
         </nav>
       </div>
