@@ -68,6 +68,21 @@
           <p class="footer-tagline">{{ site.description }}</p>
         </div>
 
+        <div class="footer-newsletter">
+          <p class="footer-newsletter-label">Get AI news in your inbox</p>
+          <form
+            action="https://buttondown.com/api/emails/embed-subscribe/sinankprn"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://buttondown.com/sinankprn', 'popupwindow')"
+            class="footer-newsletter-form"
+          >
+            <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="footer-newsletter-note">Free, no spam. Unsubscribe anytime.</p>
+        </div>
+
         <div class="footer-author">
           <p class="footer-author-label">Created by</p>
           <a href="{{ site.author.url }}" class="footer-author-link" target="_blank" rel="noopener">
@@ -77,14 +92,18 @@
 
         <div class="footer-links">
           <a href="{{ '/feed.xml' | relative_url }}" aria-label="Subscribe to RSS feed">
-            <span aria-hidden="true">📡</span> RSS
+            <span aria-hidden="true">&#128225;</span> RSS
           </a>
           <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">
-            <span aria-hidden="true">💻</span> GitHub
+            <span aria-hidden="true">&#128187;</span> GitHub
           </a>
           <a href="{{ site.author.url }}" target="_blank" rel="noopener" aria-label="Website">
-            <span aria-hidden="true">🌐</span> Website
+            <span aria-hidden="true">&#127760;</span> Website
           </a>
+        </div>
+
+        <div class="footer-legal">
+          <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
         </div>
 
         <p class="footer-copyright">
