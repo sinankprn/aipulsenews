@@ -23,7 +23,7 @@ OpenAI has officially set an expiration date for the models that defined the cur
 
 According to a recent announcement on the OpenAI blog, these changes are part of a strategic shift to consolidate the user base onto the more advanced GPT-5.2 framework. While the news specifically targets the ChatGPT interface, the implications for the broader developer ecosystem are significant.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Keep4o?src=hash&amp;ref_src=twsrc%5Etfw">#Keep4o</a> petition has surpassed 10,000 signatures!<br><br>​Your efforts matter. Every single voice counts. Please keep fighting. Please keep holding the line.<br><br>​GPT-4o remains irreplaceable.<br><br>Its architecture possesses unique capabilities in the humanities and social sciences. It… <a href="https://t.co/RXVWOvG3vO">https://t.co/RXVWOvG3vO</a> <a href="https://t.co/uzOGBD9wMF">pic.twitter.com/uzOGBD9wMF</a></p>&mdash; ji yu shun (@kexicheng) <a href="https://twitter.com/kexicheng/status/2017360725128388761?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include tweet.html user="kexicheng" id="2017360725128388761" %}
 
 ### The Migration Timeline
 
@@ -38,8 +38,6 @@ Crucially, OpenAI has clarified in a support article that these models will cont
 The retirement of GPT-4o is a particularly notable milestone. Despite being a flagship model, its usage has plummeted to just 0.1% of the daily user base as the majority of traffic has migrated to the GPT-5.2 architecture. OpenAI previously restored GPT-4o after a brief deprecation period following feedback from Plus and Pro users who preferred its specific conversational "warmth" and creative ideation capabilities.
 
 OpenAI notes that this feedback was instrumental in developing GPT-5.1 and GPT-5.2. The newer models now include granular controls for personality, style, and tone, allowing users to select "Friendly" or "Enthusiastic" modes. By baking these subjective qualities into the newer architecture, OpenAI believes the primary reason for maintaining older models has been addressed.
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/Keep4o?src=hash&amp;ref_src=twsrc%5Etfw">#Keep4o</a> petition has surpassed 10,000 signatures!<br><br>​Your efforts matter. Every single voice counts. Please keep fighting. Please keep holding the line.<br><br>​GPT-4o remains irreplaceable.<br><br>Its architecture possesses unique capabilities in the humanities and social sciences. It… <a href="https://t.co/RXVWOvG3vO">https://t.co/RXVWOvG3vO</a> <a href="https://t.co/uzOGBD9wMF">pic.twitter.com/uzOGBD9wMF</a></p>&mdash; ji yu shun (@kexicheng) <a href="https://twitter.com/kexicheng/status/2017360725128388761?ref_src=twsrc%5Etfw">January 30, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Impact on Production and API Strategy
 
