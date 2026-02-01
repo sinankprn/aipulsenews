@@ -345,28 +345,7 @@ button {
   overflow: hidden;
 }
 
-/* Shimmer effect on featured image */
-.featured-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-
-  50%,
-  100% {
-    left: 200%;
-  }
-}
+/* Shimmer effect removed - looked bad over actual images */
 
 .featured-content {
   padding: var(--space-lg);
@@ -654,11 +633,12 @@ button {
 /* Post Hero Image */
 .post-hero-image {
   width: calc(100% + var(--space-lg) * 2);
-  height: 200px;
+  height: 250px;
   margin: calc(-1 * var(--space-lg));
   margin-bottom: var(--space-lg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   background-color: var(--dark-soft);
   position: relative;
 }
@@ -1119,7 +1099,7 @@ button {
 
   .post-hero-image {
     width: calc(100% + var(--space-xl) * 2);
-    height: 280px;
+    height: 320px;
     margin: calc(-1 * var(--space-xl));
     margin-bottom: var(--space-xl);
   }
@@ -1189,7 +1169,7 @@ button {
 
   .post-hero-image {
     width: calc(100% + var(--space-2xl) * 2);
-    height: 360px;
+    height: 400px;
     margin: calc(-1 * var(--space-2xl));
     margin-bottom: var(--space-2xl);
   }
