@@ -1,8 +1,8 @@
 # Site Settings
 title: "AI Pulse"
 description: "Daily AI news, breakthroughs, and insights curated for humans"
-url: "" # Set to your GitHub Pages URL: https://username.github.io
-baseurl: ""
+url: "https://sinankprn.github.io" # Set to your GitHub Pages URL: https://username.github.io
+baseurl: "/aipulsenews"
 lang: en
 
 # Author
