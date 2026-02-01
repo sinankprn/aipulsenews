@@ -2044,24 +2044,7 @@ button:focus-visible {
   text-decoration: underline;
 }
 
-@media (min-width: 600px) {
-  .footer-newsletter-inner {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-  }
-
-  .footer-newsletter-text {
-    flex: 1;
-    text-align: left;
-  }
-
-  .footer-newsletter-form {
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 599px) {
+@media (max-width: 480px) {
   .footer-newsletter-form {
     flex-direction: column;
   }
