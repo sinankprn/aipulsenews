@@ -16,6 +16,7 @@ tags:
   - Video Generation
   - Elon Musk
 title: xAI Unveils Grok Imagine 1.0 - A High-Speed Leap in Generative Video and Audio
+image: "/assets/images/posts/grokimagine.jpg"
 ---
 
 Silicon Valley is no stranger to rapid deployment, but the trajectory of xAI’s video initiatives is setting a new benchmark for velocity. Just months after the debut of its initial creative tools, the Elon Musk led startup has officially launched Grok Imagine 1.0. This release marks a significant transition from experimental software to a production-ready suite designed for high-resolution video generation, sophisticated editing, and integrated audio.
