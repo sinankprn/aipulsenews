@@ -1,12 +1,19 @@
 name: Generate AI News Content
 
 on:
-  # Run daily at 9 AM UTC
+  # Run daily at 9 AM UTC (runs on default branch)
   schedule:
     - cron: '0 9 * * *'
 
-  # Allow manual trigger
+  # Allow manual trigger from any branch
   workflow_dispatch:
+
+  # Run when content queue changes on any branch
+  push:
+    paths:
+      - '_content-queue/**'
+      - '!_content-queue/_processed/**'
+      - '!_content-queue/TEMPLATE.md'
 
 permissions:
   contents: write
@@ -18,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,4 +59,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Generate AI news drafts [automated]"
-          git push
+          git push origin HEAD
