@@ -29,28 +29,41 @@
   if (!slideEl) return;
 
   var STORAGE_KEY = 'newsletter-slide-dismissed';
-  var shown = false;
-  var dismissed = localStorage.getItem(STORAGE_KEY);
 
-  if (dismissed) {
+  // Check if previously dismissed
+  if (localStorage.getItem(STORAGE_KEY)) {
     slideEl.remove();
     return;
   }
 
-  function checkScroll() {
-    var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    var scrollPercent = (window.scrollY / scrollHeight) * 100;
+  function getScrollPercent() {
+    var docHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    var winHeight = window.innerHeight;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var scrollable = docHeight - winHeight;
 
-    // Show between 50% and 90% scroll
-    if (scrollPercent >= 50 && scrollPercent < 90 && !shown) {
+    if (scrollable <= 0) return 0;
+    return (scrollTop / scrollable) * 100;
+  }
+
+  function checkScroll() {
+    var percent = getScrollPercent();
+
+    // Show between 40% and 85%
+    if (percent >= 40 && percent < 85) {
       slideEl.classList.add('visible');
-      shown = true;
-    } else if (scrollPercent >= 90 && shown) {
-      // Hide near end of article
+    } else {
       slideEl.classList.remove('visible');
     }
   }
 
+  // Check on load (in case page is already scrolled)
+  checkScroll();
+
+  // Throttled scroll listener
   var ticking = false;
   window.addEventListener('scroll', function() {
     if (!ticking) {
