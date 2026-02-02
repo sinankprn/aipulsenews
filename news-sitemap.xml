@@ -4,24 +4,18 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  {% assign posts = site.posts | where_exp: "post", "post.date > site.time | date_to_xmlschema | date: '%s' | minus: 172800 | date: '%Y-%m-%d'" %}
-  {% for post in site.posts limit: 1000 %}
-  {% assign post_age = site.time | date: "%s" | minus: post.date | date: "%s" %}
-  {% if post_age < 172800 %}
+{% for post in site.posts limit: 50 %}
   <url>
     <loc>{{ post.url | absolute_url }}</loc>
     <news:news>
       <news:publication>
-        <news:name>{{ site.title }}</news:name>
+        <news:name>{{ site.title | xml_escape }}</news:name>
         <news:language>{{ site.lang | default: 'en' }}</news:language>
       </news:publication>
       <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>
       <news:title>{{ post.title | xml_escape }}</news:title>
-      {% if post.tags.size > 0 %}
-      <news:keywords>{{ post.tags | join: ', ' | xml_escape }}</news:keywords>
-      {% endif %}
+      {% if post.tags.size > 0 %}<news:keywords>{{ post.tags | join: ', ' | xml_escape }}</news:keywords>{% endif %}
     </news:news>
   </url>
-  {% endif %}
-  {% endfor %}
+{% endfor %}
 </urlset>
