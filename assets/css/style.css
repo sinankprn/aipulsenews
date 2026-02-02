@@ -2030,6 +2030,10 @@ button:focus-visible {
 
 .footer-legal {
   margin-top: var(--space-sm);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs) var(--space-md);
 }
 
 .footer-legal a {
@@ -2113,4 +2117,63 @@ button:focus-visible {
 .post-content img.loaded,
 .post-content img:not([loading="lazy"]) {
   opacity: 1;
+}
+
+/* ============================================
+   LAST UPDATED DATE
+   ============================================ */
+.post-updated {
+  color: var(--success);
+  font-weight: 500;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+.back-to-top {
+  position: fixed;
+  bottom: calc(var(--space-lg) + var(--safe-bottom));
+  right: var(--space-lg);
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  z-index: 100;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), 0 0 20px var(--primary-glow);
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: opacity var(--transition-fast);
+  }
+
+  .back-to-top:hover {
+    transform: none;
+  }
 }

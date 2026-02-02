@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://artificialintelligencepulse.it.com/sitemap.xml
+Sitemap: https://artificialintelligencepulse.it.com/news-sitemap.xml
