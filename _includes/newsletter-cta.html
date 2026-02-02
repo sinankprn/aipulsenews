@@ -1,45 +1,74 @@
-<aside class="newsletter-cta" id="newsletter-cta" aria-label="Newsletter subscription">
-  <button class="newsletter-cta-dismiss" aria-label="Dismiss newsletter signup" onclick="dismissNewsletterCta()">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="18" y1="6" x2="6" y2="18"></line>
-      <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
-  </button>
-  <div class="newsletter-cta-content">
-    <div class="newsletter-cta-icon" aria-hidden="true">&#128233;</div>
-    <div class="newsletter-cta-text">
-      <h3 class="newsletter-cta-title">Stay Ahead in AI</h3>
-      <p class="newsletter-cta-desc">Get weekly insights on the latest AI breakthroughs delivered to your inbox.</p>
+<div id="newsletter-slide" class="newsletter-slide" role="complementary" aria-label="Newsletter subscription">
+  <div class="newsletter-slide-content">
+    <div class="newsletter-slide-text">
+      <span class="newsletter-slide-icon" aria-hidden="true">&#9889;</span>
+      <span class="newsletter-slide-msg"><strong>Enjoying this?</strong> Get weekly AI insights in your inbox.</span>
     </div>
     <form
       action="https://buttondown.com/api/emails/embed-subscribe/sinankprn"
       method="post"
       target="popupwindow"
       onsubmit="window.open('https://buttondown.com/sinankprn', 'popupwindow')"
-      class="newsletter-cta-form"
+      class="newsletter-slide-form"
     >
-      <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+      <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
       <button type="submit">Subscribe</button>
     </form>
+    <button class="newsletter-slide-dismiss" aria-label="Dismiss" onclick="dismissNewsletterSlide()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
   </div>
-</aside>
+</div>
 
 <script>
 (function() {
-  var ctaEl = document.getElementById('newsletter-cta');
-  if (!ctaEl) return;
+  var slideEl = document.getElementById('newsletter-slide');
+  if (!slideEl) return;
 
-  // Check if dismissed
-  if (localStorage.getItem('newsletter-cta-dismissed')) {
-    ctaEl.style.display = 'none';
+  var STORAGE_KEY = 'newsletter-slide-dismissed';
+  var shown = false;
+  var dismissed = localStorage.getItem(STORAGE_KEY);
+
+  if (dismissed) {
+    slideEl.remove();
+    return;
   }
+
+  function checkScroll() {
+    var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = (window.scrollY / scrollHeight) * 100;
+
+    // Show between 50% and 90% scroll
+    if (scrollPercent >= 50 && scrollPercent < 90 && !shown) {
+      slideEl.classList.add('visible');
+      shown = true;
+    } else if (scrollPercent >= 90 && shown) {
+      // Hide near end of article
+      slideEl.classList.remove('visible');
+    }
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        checkScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 })();
 
-function dismissNewsletterCta() {
-  var ctaEl = document.getElementById('newsletter-cta');
-  if (ctaEl) {
-    ctaEl.style.display = 'none';
-    localStorage.setItem('newsletter-cta-dismissed', 'true');
+function dismissNewsletterSlide() {
+  var slideEl = document.getElementById('newsletter-slide');
+  if (slideEl) {
+    slideEl.classList.remove('visible');
+    localStorage.setItem('newsletter-slide-dismissed', 'true');
+    setTimeout(function() { slideEl.remove(); }, 300);
   }
 }
 </script>

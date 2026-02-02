@@ -90,8 +90,6 @@ layout: default
 
   {% include ad-unit.html slot="YOUR_AD_SLOT_1" format="auto" %}
 
-  {% include newsletter-cta.html %}
-
   {% include social-share.html %}
 
   {% include related-posts.html %}
@@ -139,6 +137,8 @@ layout: default
     <polyline points="18 15 12 9 6 15"></polyline>
   </svg>
 </button>
+
+{% include newsletter-cta.html %}
 
 <script src="{{ '/assets/js/progress.js' | relative_url }}"></script>
 {% if page.toc %}
