@@ -4,6 +4,25 @@ layout: default
 
 <div class="progress-bar" aria-hidden="true"></div>
 
+<div id="continue-reading-toast" class="continue-reading-toast" role="alert" aria-live="polite">
+  <div class="toast-content">
+    <span class="toast-icon" aria-hidden="true">&#128214;</span>
+    <div class="toast-text">
+      <span class="toast-title">Continue reading?</span>
+      <span class="toast-progress">50% read</span>
+    </div>
+    <div class="toast-actions">
+      <button class="toast-continue">Continue</button>
+      <button class="toast-dismiss" aria-label="Dismiss">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
 <article class="post" itemscope itemtype="https://schema.org/NewsArticle">
   <meta itemprop="mainEntityOfPage" content="{{ page.url | absolute_url }}">
 
@@ -70,6 +89,8 @@ layout: default
   </div>
 
   {% include ad-unit.html slot="YOUR_AD_SLOT_1" format="auto" %}
+
+  {% include newsletter-cta.html %}
 
   {% include social-share.html %}
 

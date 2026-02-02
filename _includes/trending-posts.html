@@ -1,0 +1,27 @@
+{% assign trending_posts = site.posts | where: "trending", true | limit: 4 %}
+{% if trending_posts.size > 0 %}
+<section class="trending-section" aria-label="Editor's picks">
+  <header class="section-header">
+    <h2 class="section-title"><span aria-hidden="true">&#128293;</span> Editor's Picks</h2>
+  </header>
+
+  <div class="trending-grid" role="list">
+    {% for post in trending_posts limit: 4 %}
+    <article class="trending-card" role="listitem">
+      <span class="trending-number" aria-hidden="true">{{ forloop.index }}</span>
+      <div class="trending-content">
+        <h3 class="trending-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <div class="trending-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+          {% if post.tags.size > 0 %}
+          <span class="trending-tag">{{ post.tags | first }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

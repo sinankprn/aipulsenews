@@ -34,6 +34,8 @@ title: Home
 </section>
 {% endif %}
 
+{% include trending-posts.html %}
+
 {% include ad-unit.html slot="YOUR_AD_SLOT_2" format="horizontal" %}
 
 {% assign other_posts = site.posts | slice: 1, 20 %}

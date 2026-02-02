@@ -1,0 +1,45 @@
+<aside class="newsletter-cta" id="newsletter-cta" aria-label="Newsletter subscription">
+  <button class="newsletter-cta-dismiss" aria-label="Dismiss newsletter signup" onclick="dismissNewsletterCta()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <div class="newsletter-cta-content">
+    <div class="newsletter-cta-icon" aria-hidden="true">&#128233;</div>
+    <div class="newsletter-cta-text">
+      <h3 class="newsletter-cta-title">Stay Ahead in AI</h3>
+      <p class="newsletter-cta-desc">Get weekly insights on the latest AI breakthroughs delivered to your inbox.</p>
+    </div>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/sinankprn"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/sinankprn', 'popupwindow')"
+      class="newsletter-cta-form"
+    >
+      <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</aside>
+
+<script>
+(function() {
+  var ctaEl = document.getElementById('newsletter-cta');
+  if (!ctaEl) return;
+
+  // Check if dismissed
+  if (localStorage.getItem('newsletter-cta-dismissed')) {
+    ctaEl.style.display = 'none';
+  }
+})();
+
+function dismissNewsletterCta() {
+  var ctaEl = document.getElementById('newsletter-cta');
+  if (ctaEl) {
+    ctaEl.style.display = 'none';
+    localStorage.setItem('newsletter-cta-dismissed', 'true');
+  }
+}
+</script>
