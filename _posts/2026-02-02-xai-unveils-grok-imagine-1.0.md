@@ -8,7 +8,6 @@ sources:
   - https://www.linkedin.com/posts/ethanhe42_thrilled-to-share-our-new-grok-imagine-release-activity-7422522795214991361-SGiG/
   - https://x.com/xai/status/2018164753810764061
   - https://x.ai/news/grok-imagine-api
-  -
 tags:
   - xAI
   - Grok
