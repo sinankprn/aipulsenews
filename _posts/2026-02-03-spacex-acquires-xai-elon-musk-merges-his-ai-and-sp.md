@@ -18,6 +18,7 @@ tags:
   - Space Technology
   - Acquisitions
 title: "SpaceX Acquires xAI: Elon Musk Merges His AI and Space Empires"
+image: "/assets/images/posts/spacex-xai.png"
 ---
 
 The silicon-dense landscape of Northern Virginia and the energy-hungry clusters of Dublin are reaching a physical breaking point, prompting a strategic shift in perspective that looks far above the atmosphere. On February 2, 2026, Elon Musk announced the formal merger of his aerospace giant, SpaceX, and his artificial intelligence venture, xAI. This acquisition marks a pivot from terrestrial-bound large language models to a future where the most powerful compute clusters in existence reside in low Earth orbit.
