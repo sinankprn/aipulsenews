@@ -47,7 +47,7 @@ The merger does not stop at Earth's orbit. The long-term roadmap involves using 
 
 This strategy is framed as a step toward becoming a Kardashev II-level civilization, a theoretical society capable of harnessing the total energy output of its parent star. By placing compute clusters closer to the Sun, xAI intends to capture a non-trivial percentage of solar power to fuel the training of increasingly complex models. This infrastructure is designed to be the foundational layer for future settlements on Mars and beyond, ensuring that the "light of consciousness" is supported by a robust digital backbone.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">SpaceX has acquired xAI, forming one of the most ambitious, vertically integrated innovation engines on (and off) Earth → <a href="https://t.co/3ODfcYnqfg">https://t.co/3ODfcYnqfg</a> <a href="https://t.co/el40rCUBGe">pic.twitter.com/el40rCUBGe</a></p>&mdash; SpaceX (@SpaceX) <a href="https://twitter.com/SpaceX/status/2018440335140024383?ref_src=twsrc%5Etfw">February 2, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">One Team 🚀<a href="https://t.co/8RWbk5jQIQ">https://t.co/8RWbk5jQIQ</a></p>&mdash; xAI (@xai) <a href="https://twitter.com/xai/status/2018441619230568627?ref_src=twsrc%5Etfw">February 2, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### What to Watch Next
 
