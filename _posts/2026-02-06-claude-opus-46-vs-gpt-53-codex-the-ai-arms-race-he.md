@@ -16,6 +16,7 @@ tags:
   - OpenAI
   - GPT-5.3
 title: "Claude Opus 4.6 vs GPT-5.3 Codex: The AI Arms Race Heats Up"
+image: "/assets/images/posts/claudevsopenai.jpeg"
 ---
 
 The gap between conversational chatbots and autonomous digital workers has narrowed significantly this week. In a coordinated display of technical strength, Anthropic and OpenAI have released their latest frontier models, Claude Opus 4.6 and GPT-5.3 Codex, signaling a pivot from AI that merely answers questions to AI that independently executes complex, multi-step projects.
