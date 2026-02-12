@@ -2,7 +2,7 @@
 layout: default
 title: "About Sinan Koparan"
 description: "Learn about Sinan Koparan, PhD Candidate in Sports Data Science & AI, creator of AI Pulse."
-permalink: /author/
+permalink: /about/
 ---
 
 <article class="author-page" itemscope itemtype="https://schema.org/Person">

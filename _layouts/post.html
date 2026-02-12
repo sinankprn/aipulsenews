@@ -138,7 +138,9 @@ layout: default
   </svg>
 </button>
 
+{% if site.newsletter.popup_enabled %}
 {% include newsletter-cta.html %}
+{% endif %}
 
 <script src="{{ '/assets/js/progress.js' | relative_url }}"></script>
 {% if page.toc %}

@@ -71,8 +71,12 @@ defaults:
 # Google AdSense
 # Replace with your AdSense publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
 adsense:
-  enabled: true
+  enabled: false
   publisher_id: "ca-pub-5814690967626535"
+
+# Newsletter popup
+newsletter:
+  popup_enabled: false
 
 # Exclude from build
 exclude:
