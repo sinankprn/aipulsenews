@@ -46,6 +46,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate-v2
+
+# Pagination
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: "/page/:num/"
+  sort_reverse: true
 
 # SEO Defaults
 logo: /assets/images/icons/web-app-manifest-512x512.png
@@ -76,7 +84,7 @@ adsense:
 
 # Newsletter popup
 newsletter:
-  popup_enabled: false
+  popup_enabled: true
 
 # Exclude from build
 exclude:

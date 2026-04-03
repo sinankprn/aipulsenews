@@ -1,17 +1,21 @@
 ---
 layout: default
 title: Home
+pagination:
+  enabled: true
 ---
 
+{% if paginator.page == 1 %}
 {% assign featured = site.posts.first %}
 {% if featured %}
 <section class="hero-section" aria-label="Featured article">
   <article class="featured-post">
     {% if featured.image %}
-    <div class="featured-image" style="background-image: url('{{ featured.image | relative_url }}');"
-      aria-hidden="true"></div>
+    <div class="featured-image">
+      <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}" loading="eager" width="1200" height="630">
+    </div>
     {% else %}
-    <div class="featured-image" aria-hidden="true">&#x1F4F0;</div>
+    <div class="featured-image featured-image--fallback" aria-hidden="true">&#x1F4F0;</div>
     {% endif %}
     <div class="featured-content">
       <span class="featured-badge" aria-label="Latest article">&#x2728; Latest</span>
@@ -21,11 +25,11 @@ title: Home
       <p class="featured-excerpt">{% if featured.description %}{{ featured.description }}{% else %}{{ featured.excerpt | strip_html | truncatewords: 30 }}{% endif %}</p>
       <div class="featured-meta">
         <time datetime="{{ featured.date | date_to_xmlschema }}">
-          <span aria-hidden="true">📅</span> {{ featured.date | date: "%B %d, %Y" }}
+          <span aria-hidden="true">&#x1F4C5;</span> {{ featured.date | date: "%B %d, %Y" }}
         </time>
         {% if featured.tags.size > 0 %}
         <span aria-label="Tags: {{ featured.tags | join: ', ' }}">
-          <span aria-hidden="true">🏷️</span> {{ featured.tags | join: " · " }}
+          <span aria-hidden="true">&#x1F3F7;&#xFE0F;</span> {{ featured.tags | join: " &middot; " }}
         </span>
         {% endif %}
       </div>
@@ -36,23 +40,32 @@ title: Home
 
 {% include trending-posts.html %}
 
-{% include ad-unit.html slot="YOUR_AD_SLOT_2" format="horizontal" %}
+{% include video-section.html %}
 
-{% assign other_posts = site.posts | slice: 1, 20 %}
-{% if other_posts.size > 0 %}
+{% include ad-unit.html slot="YOUR_AD_SLOT_2" format="horizontal" %}
+{% endif %}
+
+{% if paginator.page == 1 %}
+  {% assign posts_to_show = paginator.posts | slice: 1, paginator.per_page %}
+{% else %}
+  {% assign posts_to_show = paginator.posts %}
+{% endif %}
+
+{% if posts_to_show.size > 0 %}
 <section class="posts-section" aria-label="Recent articles">
   <header class="section-header">
-    <h2 class="section-title"><span aria-hidden="true">📰</span> Recent Stories</h2>
+    <h2 class="section-title"><span aria-hidden="true">&#x1F4F0;</span> {% if paginator.page == 1 %}Recent Stories{% else %}Stories &mdash; Page {{ paginator.page }}{% endif %}</h2>
   </header>
 
   <div class="posts-grid" role="list">
-    {% for post in other_posts %}
+    {% for post in posts_to_show %}
     <article class="post-card" role="listitem">
       {% if post.image %}
-      <div class="post-card-image" style="background-image: url('{{ post.image | relative_url }}');" aria-hidden="true">
+      <div class="post-card-image">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="600" height="315">
       </div>
       {% else %}
-      <div class="post-card-image" aria-hidden="true">&#x1F4A1;</div>
+      <div class="post-card-image post-card-image--fallback" aria-hidden="true">&#x1F4A1;</div>
       {% endif %}
       <div class="post-card-body">
         {% if post.tags.size > 0 %}
@@ -79,8 +92,26 @@ title: Home
 </section>
 {% endif %}
 
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Page navigation">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn pagination-prev" aria-label="Previous page">&larr; Newer</a>
+  {% else %}
+  <span class="pagination-btn pagination-prev pagination-disabled" aria-hidden="true">&larr; Newer</span>
+  {% endif %}
+
+  <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn pagination-next" aria-label="Next page">Older &rarr;</a>
+  {% else %}
+  <span class="pagination-btn pagination-next pagination-disabled" aria-hidden="true">Older &rarr;</span>
+  {% endif %}
+</nav>
+{% endif %}
+
 {% if site.posts.size == 0 %}
 <section class="no-posts" aria-label="No content available">
-  <p>🚀 No posts yet. Check back soon for AI news and insights.</p>
+  <p>&#x1F680; No posts yet. Check back soon for AI news and insights.</p>
 </section>
 {% endif %}

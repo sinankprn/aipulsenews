@@ -1,9 +1,9 @@
 name: Generate AI News Content
 
 on:
-  # Run daily at 9 AM UTC
+  # Run twice daily at 9 AM and 6 PM UTC
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 9,18 * * *'
 
   # Allow manual trigger
   workflow_dispatch:
@@ -28,11 +28,11 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
-      - name: Generate posts from queue
+      - name: Run full content pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python scripts/generate-posts.py
+          python scripts/update-site.py
 
       - name: Check for changes
         id: check
@@ -43,11 +43,11 @@ jobs:
             echo "changes=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push drafts
+      - name: Commit and push new content
         if: steps.check.outputs.changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Generate AI news drafts [automated]"
+          git commit -m "Auto-generate AI news content [automated]"
           git push

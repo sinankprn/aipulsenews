@@ -1,0 +1,124 @@
+---
+layout: default
+title: AI Videos
+description: Latest AI news and explainer videos from top YouTube channels
+---
+
+<section class="videos-page" aria-label="AI Videos">
+  <header class="page-header">
+    <h1 class="page-title"><span aria-hidden="true">&#x1F3AC;</span> AI Videos</h1>
+    <p class="page-description">The latest AI news, explainers, and deep dives from top creators.</p>
+  </header>
+
+  {% if site.data.videos and site.data.videos.size > 0 %}
+  <div class="videos-grid videos-grid--full" id="videos-grid" role="list">
+    {% for video in site.data.videos %}
+    <article class="video-card" role="listitem" data-video-index="{{ forloop.index0 }}">
+      <div class="video-embed-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/{{ video.video_id }}"
+          title="{{ video.title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="video-card-body">
+        <h2 class="video-card-title">
+          <a href="https://www.youtube.com/watch?v={{ video.video_id }}" target="_blank" rel="noopener noreferrer">{{ video.title }}</a>
+        </h2>
+        <div class="video-card-meta">
+          <span class="video-channel">{{ video.channel }}</span>
+          <time datetime="{{ video.published }}">{{ video.published_display }}</time>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <nav class="pagination" id="videos-pagination" aria-label="Video page navigation">
+    <button class="pagination-btn pagination-prev" id="videos-prev" aria-label="Previous page">&larr; Newer</button>
+    <span class="pagination-info" id="videos-page-info"></span>
+    <button class="pagination-btn pagination-next" id="videos-next" aria-label="Next page">Older &rarr;</button>
+  </nav>
+
+  <script>
+  (function() {
+    var PER_PAGE = 6;
+    var cards = document.querySelectorAll('#videos-grid .video-card');
+    var total = cards.length;
+    var totalPages = Math.ceil(total / PER_PAGE);
+    var currentPage = 1;
+    var pagination = document.getElementById('videos-pagination');
+    var prevBtn = document.getElementById('videos-prev');
+    var nextBtn = document.getElementById('videos-next');
+    var pageInfo = document.getElementById('videos-page-info');
+
+    if (totalPages <= 1) {
+      pagination.style.display = 'none';
+    }
+
+    function showPage(page) {
+      currentPage = page;
+      var start = (page - 1) * PER_PAGE;
+      var end = start + PER_PAGE;
+
+      cards.forEach(function(card, i) {
+        card.style.display = (i >= start && i < end) ? '' : 'none';
+      });
+
+      pageInfo.textContent = 'Page ' + page + ' of ' + totalPages;
+      prevBtn.classList.toggle('pagination-disabled', page <= 1);
+      prevBtn.disabled = page <= 1;
+      nextBtn.classList.toggle('pagination-disabled', page >= totalPages);
+      nextBtn.disabled = page >= totalPages;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', function() {
+      if (currentPage > 1) showPage(currentPage - 1);
+    });
+
+    nextBtn.addEventListener('click', function() {
+      if (currentPage < totalPages) showPage(currentPage + 1);
+    });
+
+    showPage(1);
+  })();
+  </script>
+  {% else %}
+  <p class="no-posts">&#x1F3AC; No videos yet. Check back soon for the latest AI video content.</p>
+  {% endif %}
+</section>
+
+{% if site.data.videos and site.data.videos.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AI Videos - AI Pulse",
+  "description": "Latest AI news and explainer videos from top YouTube channels",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {% for video in site.data.videos %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "VideoObject",
+          "name": {{ video.title | jsonify }},
+          "thumbnailUrl": "{{ video.thumbnail }}",
+          "uploadDate": "{{ video.published }}",
+          "contentUrl": "https://www.youtube.com/watch?v={{ video.video_id }}",
+          "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>
+{% endif %}

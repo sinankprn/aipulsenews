@@ -1,0 +1,58 @@
+{% if site.data.videos and site.data.videos.size > 0 %}
+<section class="videos-section" aria-label="Latest AI Videos">
+  <header class="section-header">
+    <h2 class="section-title"><span aria-hidden="true">&#x1F3AC;</span> Latest AI Videos</h2>
+    <a href="{{ '/videos/' | relative_url }}" class="section-link">View all &rarr;</a>
+  </header>
+
+  <div class="videos-grid" role="list">
+    {% for video in site.data.videos limit:3 %}
+    <article class="video-card" role="listitem">
+      <a href="https://www.youtube.com/watch?v={{ video.video_id }}" target="_blank" rel="noopener noreferrer" class="video-thumb-link" aria-label="Watch: {{ video.title }}">
+        <div class="video-thumb">
+          <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy" width="320" height="180">
+          <div class="video-play-btn" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.65)"/>
+              <polygon points="19,14 19,34 36,24" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <div class="video-card-body">
+        <h3 class="video-card-title">
+          <a href="https://www.youtube.com/watch?v={{ video.video_id }}" target="_blank" rel="noopener noreferrer">{{ video.title }}</a>
+        </h3>
+        <div class="video-card-meta">
+          <span class="video-channel">{{ video.channel }}</span>
+          <time datetime="{{ video.published }}">{{ video.published_display }}</time>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for video in site.data.videos limit:3 %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "VideoObject",
+        "name": {{ video.title | jsonify }},
+        "thumbnailUrl": "{{ video.thumbnail }}",
+        "uploadDate": "{{ video.published }}",
+        "contentUrl": "https://www.youtube.com/watch?v={{ video.video_id }}",
+        "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

@@ -23,12 +23,14 @@ layout: default
   </div>
 </div>
 
+{% include breadcrumbs.html %}
+
 <article class="post" itemscope itemtype="https://schema.org/NewsArticle">
   <meta itemprop="mainEntityOfPage" content="{{ page.url | absolute_url }}">
 
   {% if page.image %}
-  <div class="post-hero-image" style="background-image: url('{{ page.image | relative_url }}');">
-    <meta itemprop="image" content="{{ page.image | absolute_url }}">
+  <div class="post-hero-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="eager" width="1200" height="630" itemprop="image">
   </div>
   {% endif %}
 
@@ -89,6 +91,8 @@ layout: default
   </div>
 
   {% include ad-unit.html slot="YOUR_AD_SLOT_1" format="auto" %}
+
+  {% include faq-schema.html %}
 
   {% include social-share.html %}
 
