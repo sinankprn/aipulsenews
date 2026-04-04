@@ -450,6 +450,22 @@ button {
   gap: 6px;
 }
 
+.featured-author a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  min-height: auto;
+}
+
+.featured-author a:hover {
+  text-decoration: underline;
+}
+
+.post-card-reading-time {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
 /* ============================================
    POSTS SECTION
    ============================================ */
@@ -1572,6 +1588,18 @@ button:focus-visible {
 .share-twitter:hover {
   background: #333;
   color: #fff;
+}
+
+.share-btn--primary {
+  width: auto;
+  padding: 0 var(--space-md);
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.share-btn-label {
+  font-size: 0.85rem;
 }
 
 .share-linkedin {
@@ -2867,6 +2895,344 @@ button:focus-visible {
 @media (min-width: 1200px) {
   .videos-grid--full {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   ENHANCED AUTHOR BOX (Brand-Building)
+   ============================================ */
+.author-box--featured {
+  background: linear-gradient(135deg, var(--bg-subtle) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border: 2px solid var(--border);
+  padding: var(--space-xl);
+  gap: var(--space-lg);
+}
+
+.author-box--featured .author-avatar {
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.author-box--featured .author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+.author-name-link {
+  font-size: 1.15rem;
+  margin: 0 0 var(--space-xs) !important;
+}
+
+.author-name-link a {
+  color: var(--dark);
+  font-weight: 700;
+  text-decoration: none;
+  min-height: auto;
+}
+
+.author-name-link a:hover {
+  color: var(--primary);
+}
+
+.author-box--featured .author-links {
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.author-box--featured .author-links a {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 0.85rem;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.author-box--featured .author-links a:hover {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.08));
+  text-decoration: none;
+}
+
+.author-link--linkedin {
+  border-color: #0077b5 !important;
+  color: #0077b5 !important;
+  font-weight: 700 !important;
+}
+
+.author-link--linkedin:hover {
+  background: #0077b5 !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   AUTHOR FOLLOW CTA (Slide-in)
+   ============================================ */
+.author-follow-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  padding: 0 var(--space-md);
+  padding-bottom: var(--safe-bottom);
+}
+
+.author-follow-cta.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.author-follow-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.author-follow-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.author-follow-text strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.author-follow-text span {
+  opacity: 0.9;
+  font-size: 0.85rem;
+}
+
+.author-follow-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  min-height: 40px;
+}
+
+.follow-btn--linkedin {
+  background: #fff;
+  color: #0077b5;
+}
+
+.follow-btn--linkedin:hover {
+  background: #f0f7fb;
+  color: #005885;
+  transform: translateY(-1px);
+}
+
+.follow-btn--website {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.follow-btn--website:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.author-follow-dismiss {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.author-follow-dismiss:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .author-follow-content {
+    flex-wrap: wrap;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .author-follow-text {
+    width: 100%;
+    padding-right: 36px;
+  }
+
+  .author-follow-buttons {
+    width: 100%;
+  }
+
+  .follow-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .author-follow-dismiss {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+  }
+
+  .author-follow-content {
+    position: relative;
+  }
+}
+
+/* ============================================
+   POST NAVIGATION (Prev/Next)
+   ============================================ */
+.post-nav-full {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-bottom: calc(var(--space-lg) + var(--safe-bottom));
+}
+
+.post-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  min-height: auto;
+}
+
+.post-nav-link:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.post-nav-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.post-nav-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-nav-link:hover .post-nav-title {
+  color: var(--primary);
+}
+
+.post-nav-next {
+  text-align: right;
+}
+
+@media (min-width: 600px) {
+  .post-nav-full {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   FOOTER SOCIAL LINKS
+   ============================================ */
+.footer-author-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  min-height: 40px;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.footer-social-link--linkedin {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  font-weight: 700;
+}
+
+.footer-social-link--linkedin:hover {
+  background: #fff !important;
+  color: #0077b5 !important;
+}
+
+.footer-social-link svg {
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .footer-author-links {
+    justify-content: flex-start;
   }
 }
 

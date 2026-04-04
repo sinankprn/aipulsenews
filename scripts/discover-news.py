@@ -21,7 +21,7 @@ import yaml
 QUEUE_DIR = Path(__file__).parent.parent / "_content-queue"
 POSTS_DIR = Path(__file__).parent.parent / "_posts"
 PROCESSED_DIR = QUEUE_DIR / "_processed"
-MAX_STORIES = 3
+MAX_STORIES = 4
 
 # AI-related keywords for filtering
 AI_KEYWORDS = [
@@ -96,6 +96,8 @@ def fetch_google_news() -> list[dict]:
         "artificial intelligence",
         "AI LLM",
         "OpenAI OR Anthropic OR Google AI",
+        "AI startup funding OR AI acquisition",
+        "AI regulation OR AI policy",
     ]
 
     for query in queries:

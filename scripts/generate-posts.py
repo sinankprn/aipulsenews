@@ -104,7 +104,7 @@ FULL SOURCE CONTENT (raw HTML from the source articles, extract the relevant inf
 {source_html}
 """
 
-    prompt = f"""You are a professional tech journalist writing for an AI news blog called "AI Pulse".
+    prompt = f"""You are a professional tech journalist writing for "AI Pulse", an AI news blog by Sinan Koparan, a PhD Candidate in Sports Data Science & AI.
 Write a well-researched, engaging article based on the following information.
 
 HEADLINE: {topic['headline']}
@@ -118,18 +118,19 @@ ADDITIONAL CONTEXT:
 {topic['notes']}
 {source_section}
 REQUIREMENTS:
-1. Write in a professional but accessible tone
+1. Write in a professional but accessible tone, with confident expert analysis
 2. Start with a compelling hook, not "In the world of AI..." or similar cliches
 3. Include relevant context and background
 4. Explain technical concepts clearly for a general audience
-5. Be factual and balanced - avoid hype or speculation
-6. Keep it between 500-800 words
+5. Be factual and balanced, avoid hype or speculation
+6. Keep it between 600-900 words
 7. Use subheadings (## Heading) to break up the content
-8. End with implications or what to watch for next
-9. Do NOT include the headline in the body - just the article content
+8. End with a forward-looking section about implications and what to watch for next
+9. Do NOT include the headline in the body, just the article content
 10. Cite sources where appropriate
-11. Do not use emdashes (—), use commas (,) instead.
-12. At the very end, add a "## Frequently Asked Questions" section with exactly 3 Q&A pairs.
+11. Do not use emdashes, use commas instead
+12. Naturally weave in expert perspective, e.g. "This aligns with broader trends in..." or "From a data science perspective..."
+13. At the very end, add a "## Frequently Asked Questions" section with exactly 3 Q&A pairs.
     Format each as:
     **Q: Question here?**
     A: Answer here.
@@ -168,6 +169,31 @@ def parse_faq_from_content(content: str) -> tuple[str, list[dict]]:
     return clean_content, faq_list
 
 
+def generate_description(headline: str, content: str) -> str:
+    """Generate an SEO-optimized description using Gemini."""
+    try:
+        prompt = f"""Write a compelling 140-155 character meta description for this article.
+It should include the main keyword naturally and entice clicks from Google search results.
+Do NOT use emdashes. Do NOT wrap in quotes. Just the description text.
+
+Title: {headline}
+First paragraph: {content[:500]}
+
+Meta description:"""
+        response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=prompt,
+        )
+        desc = response.text.strip().strip('"').strip("'")
+        if len(desc) > 160:
+            desc = desc[:157] + "..."
+        return desc
+    except Exception:
+        # Fallback to first sentence
+        first_para = content.split("\n\n")[0] if content else headline
+        return first_para[:157].replace("\n", " ").strip() + "..."
+
+
 def create_post(topic: dict, article_content: str, output_dir: Path) -> Path:
     """Create a Jekyll post file."""
 
@@ -179,6 +205,9 @@ def create_post(topic: dict, article_content: str, output_dir: Path) -> Path:
     # Parse FAQ from generated content
     clean_content, faq = parse_faq_from_content(article_content)
 
+    # Generate SEO description
+    description = generate_description(topic["headline"], clean_content)
+
     # Build frontmatter
     frontmatter = {
         "layout": "post",
@@ -187,7 +216,7 @@ def create_post(topic: dict, article_content: str, output_dir: Path) -> Path:
         "author": "Sinan Koparan",
         "tags": topic["tags"],
         "sources": topic["sources"],
-        "description": clean_content[:160].replace("\n", " ").strip() + "...",
+        "description": description,
         "toc": True,
     }
 

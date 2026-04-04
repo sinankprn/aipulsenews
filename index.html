@@ -24,12 +24,15 @@ pagination:
       </h1>
       <p class="featured-excerpt">{% if featured.description %}{{ featured.description }}{% else %}{{ featured.excerpt | strip_html | truncatewords: 30 }}{% endif %}</p>
       <div class="featured-meta">
+        <span class="featured-author">
+          by <a href="{{ site.author.url }}" target="_blank" rel="noopener">{{ site.author.name }}</a>
+        </span>
         <time datetime="{{ featured.date | date_to_xmlschema }}">
-          <span aria-hidden="true">&#x1F4C5;</span> {{ featured.date | date: "%B %d, %Y" }}
+          {{ featured.date | date: "%B %d, %Y" }}
         </time>
         {% if featured.tags.size > 0 %}
         <span aria-label="Tags: {{ featured.tags | join: ', ' }}">
-          <span aria-hidden="true">&#x1F3F7;&#xFE0F;</span> {{ featured.tags | join: " &middot; " }}
+          {{ featured.tags | first }}
         </span>
         {% endif %}
       </div>
@@ -83,6 +86,10 @@ pagination:
         <p class="post-card-excerpt">{% if post.description %}{{ post.description | truncatewords: 18 }}{% else %}{{ post.excerpt | strip_html | truncatewords: 18 }}{% endif %}</p>
         <div class="post-card-meta">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+          {% assign words = post.content | number_of_words %}
+          {% assign reading_time = words | divided_by: 200 %}
+          {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+          <span class="post-card-reading-time">{{ reading_time }} min</span>
           <a href="{{ post.url | relative_url }}" class="read-more" aria-label="Read: {{ post.title }}">Read &rarr;</a>
         </div>
       </div>
