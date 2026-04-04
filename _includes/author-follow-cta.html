@@ -27,11 +27,8 @@
   var cta = document.getElementById('author-follow-cta');
   if (!cta) return;
 
-  var STORAGE_KEY = 'author-follow-dismissed';
-  var dismissed = localStorage.getItem(STORAGE_KEY);
-
-  // Don't show if dismissed in last 7 days
-  if (dismissed && (Date.now() - parseInt(dismissed, 10)) < 7 * 24 * 60 * 60 * 1000) {
+  // Session-only dismissal: show again on next visit
+  if (sessionStorage.getItem('author-follow-dismissed')) {
     cta.remove();
     return;
   }
@@ -65,7 +62,7 @@ function dismissAuthorCta() {
   var cta = document.getElementById('author-follow-cta');
   if (cta) {
     cta.classList.remove('visible');
-    localStorage.setItem('author-follow-dismissed', Date.now().toString());
+    sessionStorage.setItem('author-follow-dismissed', 'true');
     setTimeout(function() { cta.remove(); }, 300);
   }
 }
