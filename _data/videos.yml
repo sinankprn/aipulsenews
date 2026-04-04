@@ -1,4 +1,18 @@
 - channel: Yannic Kilcher
+  published: '2026-04-04'
+  published_display: Apr 04, 2026
+  thumbnail: https://img.youtube.com/vi/08NqrRQArNw/mqdefault.jpg
+  title: I’m serious.
+  url: https://www.youtube.com/watch?v=08NqrRQArNw
+  video_id: 08NqrRQArNw
+- channel: Wes Roth
+  published: '2026-04-04'
+  published_display: Apr 04, 2026
+  thumbnail: https://img.youtube.com/vi/6d2h9ZM9ofY/mqdefault.jpg
+  title: Sen. Murphy vs. Trump's corruption | Today, Explained
+  url: https://www.youtube.com/watch?v=6d2h9ZM9ofY
+  video_id: 6d2h9ZM9ofY
+- channel: Yannic Kilcher
   published: '2026-04-03'
   published_display: Apr 03, 2026
   thumbnail: https://img.youtube.com/vi/j_kJNYLI6Tw/mqdefault.jpg
@@ -68,17 +82,3 @@
   title: DeepMind’s New AI Just Changed Science Forever
   url: https://www.youtube.com/watch?v=Io_GqmbNBbY
   video_id: Io_GqmbNBbY
-- channel: Yannic Kilcher
-  published: '2026-03-27'
-  published_display: Mar 27, 2026
-  thumbnail: https://img.youtube.com/vi/pzUn9wTCgcw/mqdefault.jpg
-  title: Jira and Linear are legacy software
-  url: https://www.youtube.com/watch?v=pzUn9wTCgcw
-  video_id: pzUn9wTCgcw
-- channel: Two Minute Papers
-  published: '2026-03-26'
-  published_display: Mar 26, 2026
-  thumbnail: https://img.youtube.com/vi/XL5bq8DRn64/mqdefault.jpg
-  title: The Algorithm That Made Me Cry
-  url: https://www.youtube.com/watch?v=XL5bq8DRn64
-  video_id: XL5bq8DRn64
