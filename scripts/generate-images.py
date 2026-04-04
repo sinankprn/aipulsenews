@@ -73,40 +73,45 @@ def generate_image(title: str, output_path: Path) -> bool:
     img = create_gradient(WIDTH, HEIGHT)
     draw = ImageDraw.Draw(img)
 
-    # Add subtle grid pattern overlay
-    for x in range(0, WIDTH, 40):
-        draw.line([(x, 0), (x, HEIGHT)], fill=(*COLOR_START, 15), width=1)
-    for y in range(0, HEIGHT, 40):
-        draw.line([(0, y), (WIDTH, y)], fill=(*COLOR_START, 15), width=1)
-
     # Add accent line at top
     draw.rectangle([(0, 0), (WIDTH, 4)], fill=COLOR_ACCENT)
 
-    # Draw "AI Pulse" brand
-    brand_font = get_font(24, bold=True)
-    draw.text((60, 40), "AI PULSE", fill=(255, 255, 255, 200), font=brand_font)
+    # Draw "AI PULSE" brand centered at top
+    brand_font = get_font(22, bold=True)
+    brand_text = "AI PULSE"
+    brand_bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
+    brand_w = brand_bbox[2] - brand_bbox[0]
+    draw.text(((WIDTH - brand_w) // 2, 36), brand_text, fill=(255, 255, 255, 220), font=brand_font)
 
-    # Draw accent dot
-    draw.ellipse([(40, 44), (52, 56)], fill=COLOR_ACCENT)
+    # Draw accent line under brand
+    accent_w = 40
+    draw.rectangle([
+        ((WIDTH - accent_w) // 2, 68),
+        ((WIDTH + accent_w) // 2, 72)
+    ], fill=COLOR_ACCENT)
 
-    # Wrap and draw title
-    title_font = get_font(44, bold=True)
-    wrapped = textwrap.fill(title, width=32)
+    # Wrap and draw title centered
+    title_font = get_font(46, bold=True)
+    wrapped = textwrap.fill(title, width=28)
     lines = wrapped.split("\n")[:4]  # Max 4 lines
 
-    y_start = HEIGHT // 2 - (len(lines) * 56) // 2
+    line_height = 60
+    total_text_height = len(lines) * line_height
+    y_start = (HEIGHT - total_text_height) // 2 + 10
+
     for i, line in enumerate(lines):
-        y = y_start + i * 56
-        draw.text((60, y), line, fill=(255, 255, 255), font=title_font)
+        y = y_start + i * line_height
+        line_bbox = draw.textbbox((0, 0), line, font=title_font)
+        line_w = line_bbox[2] - line_bbox[0]
+        draw.text(((WIDTH - line_w) // 2, y), line, fill=(255, 255, 255), font=title_font)
 
-    # Draw bottom accent bar
-    draw.rectangle([(60, HEIGHT - 60), (260, HEIGHT - 56)], fill=COLOR_ACCENT)
-
-    # Draw date
+    # Draw site URL centered at bottom
     from datetime import datetime
-    date_font = get_font(18)
-    date_str = datetime.now().strftime("%B %Y")
-    draw.text((60, HEIGHT - 48), date_str, fill=(255, 255, 255, 180), font=date_font)
+    url_font = get_font(16)
+    url_text = "artificialintelligencepulse.it.com"
+    url_bbox = draw.textbbox((0, 0), url_text, font=url_font)
+    url_w = url_bbox[2] - url_bbox[0]
+    draw.text(((WIDTH - url_w) // 2, HEIGHT - 44), url_text, fill=(255, 255, 255, 150), font=url_font)
 
     # Save
     output_path.parent.mkdir(parents=True, exist_ok=True)
