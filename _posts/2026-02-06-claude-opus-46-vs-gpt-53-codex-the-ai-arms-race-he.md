@@ -1,22 +1,19 @@
 ---
+title: "Claude Opus 4.6 vs GPT-5.3 Codex: The AI Arms Race Heats Up"
+date: 2026-02-06 04:20:03
 author: Sinan Koparan
-date: "2026-02-06 04:20:03"
-description:
-  The gap between conversational chatbots and autonomous digital workers
-  has narrowed significantly this week. In a coordinated display of technical strength,
-  Ant...
-layout: post
-sources:
-  - https://www.anthropic.com/news/claude-opus-4-6
-  - https://openai.com/index/introducing-gpt-5-3-codex/
+description: "Anthropic's Claude Opus 4.6 and OpenAI's GPT-5.3 Codex launch in the same week, marking a new chapter in the frontier model competition."
 tags:
-  - Opus 4.6
   - Claude
   - Anthropic
   - OpenAI
-  - GPT-5.3
-title: "Claude Opus 4.6 vs GPT-5.3 Codex: The AI Arms Race Heats Up"
+  - LLM
+sources:
+  - https://www.anthropic.com/news/claude-opus-4-6
+  - https://openai.com/index/introducing-gpt-5-3-codex/
 image: "/assets/images/posts/claudevsopenai.jpeg"
+toc: true
+layout: post
 ---
 
 The gap between conversational chatbots and autonomous digital workers has narrowed significantly this week. In a coordinated display of technical strength, Anthropic and OpenAI have released their latest frontier models, Claude Opus 4.6 and GPT-5.3 Codex, signaling a pivot from AI that merely answers questions to AI that independently executes complex, multi-step projects.

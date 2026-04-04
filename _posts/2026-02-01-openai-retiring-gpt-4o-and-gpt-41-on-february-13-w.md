@@ -1,22 +1,19 @@
 ---
+title: "OpenAI Retiring GPT-4o and GPT-4.1 on February 13: What Developers Need to Know"
+date: 2026-02-01 18:49:33
 author: Sinan Koparan
-date: "2026-02-01 18:49:33"
-description:
-  OpenAI has officially set an expiration date for the models that defined
-  the current era of generative AI. On February 13, 2026, the company will retire
-  several...
-layout: post
-sources:
-  - https://openai.com/index/retiring-gpt-4o-and-older-models/
-  - https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models
+description: "OpenAI will retire GPT-4o and GPT-4.1 on February 13, 2026. Here is what developers need to know about the timeline and migration path."
 tags:
   - OpenAI
   - GPT
   - API
   - Developers
-  - Breaking News
-title: OpenAI Retiring GPT-4o and GPT-4.1 on February 13 - What Developers Need to Know
+sources:
+  - https://openai.com/index/retiring-gpt-4o-and-older-models/
+  - https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models
 image: "/assets/images/posts/openai-gpt-4o.png"
+toc: true
+layout: post
 ---
 
 OpenAI has officially set an expiration date for the models that defined the current era of generative AI. On February 13, 2026, the company will retire several prominent models from the ChatGPT interface, including GPT-4o, GPT-4.1, GPT-4.1 mini, and OpenAI o4-mini. Even more surprising for many in the industry is the inclusion of the recently released GPT-5 (Instant and Thinking) variants in this retirement wave.

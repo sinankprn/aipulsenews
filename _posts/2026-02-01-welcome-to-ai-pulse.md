@@ -1,17 +1,16 @@
 ---
-author: Sinan Koparan
+title: "Welcome to AI Pulse: Clear-Eyed Coverage of the AI Industry"
 date: 2026-02-01 08:00:00
-description: AI Pulse is a daily AI news publication covering model releases, industry
-  moves, research breakthroughs, and the real-world impact of artificial intelligence,
-  written for readers who want substance over hype.
-image: /assets/images/posts/welcome-to-ai-pulse-clear-eyed-coverage-of-the-ai-.png
-layout: post
-sources:
-- https://artificialintelligencepulse.it.com
+author: Sinan Koparan
+description: "AI Pulse is a daily AI news publication covering model releases, research breakthroughs, and the real-world impact of artificial intelligence."
 tags:
-- Announcements
-- AI
-title: 'Welcome to AI Pulse: Clear-Eyed Coverage of the AI Industry'
+  - Announcements
+  - AI
+sources:
+  - https://artificialintelligencepulse.it.com
+image: "/assets/images/posts/welcome-to-ai-pulse-clear-eyed-coverage-of-the-ai-.png"
+toc: true
+layout: post
 ---
 
 The artificial intelligence industry moves at a pace that makes most news cycles look glacial. In the span of a single week, a new frontier model can launch, a billion-dollar acquisition can close, and a research paper can upend assumptions that the field held for years. Keeping up is difficult. Knowing what actually matters is harder.

@@ -2,20 +2,20 @@
 title: "OpenAI Launches Codex App for macOS: A Command Center for Agent-Driven Development"
 date: 2026-02-03 09:00:00
 author: Sinan Koparan
-description: "OpenAI releases the Codex desktop app for macOS, enabling developers to orchestrate multiple AI coding agents in parallel. The app introduces Skills, Automations, and is now available to free users..."
+description: "OpenAI releases the Codex desktop app for macOS, letting developers orchestrate multiple AI coding agents in parallel with Skills and Automations."
 tags:
   - OpenAI
   - Codex
   - AI Agents
   - Software Development
-  - IDE
-  - LLMs
-image: "/assets/images/posts/codex-app-icon-openai.webp"
 sources:
   - https://openai.com/index/introducing-the-codex-app/
   - https://x.com/OpenAI/status/2018385566891704339
   - https://x.com/OpenAI/status/2018385568992752059
   - https://openai.com/codex/
+image: "/assets/images/posts/codex-app-icon-openai.webp"
+toc: true
+layout: post
 ---
 
 The promise of AI in software development has long been framed as a "copilot" experience, an assistant that sits beside you to suggest lines of code or debug errors as you type. However, with the launch of the new Codex app for macOS, OpenAI is signaling a fundamental shift in that dynamic. The role of the human developer is moving from writing code to orchestrating a fleet of autonomous agents.

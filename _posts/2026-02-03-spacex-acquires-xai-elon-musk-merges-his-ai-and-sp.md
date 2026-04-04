@@ -1,24 +1,20 @@
 ---
+title: "SpaceX Acquires xAI: Elon Musk Merges His AI and Space Empires"
+date: 2026-02-03 00:08:44
 author: Sinan Koparan
-date: "2026-02-03 00:08:44"
-description:
-  The silicon-dense landscape of Northern Virginia and the energy-hungry
-  clusters of Dublin are reaching a physical breaking point, prompting a strategic
-  shift in...
-layout: post
+description: "SpaceX formally acquires xAI, merging Musk's aerospace and AI ventures to build orbital data centers powered by solar energy and Starship logistics."
+tags:
+  - SpaceX
+  - xAI
+  - AI Infrastructure
+  - Acquisitions
 sources:
   - https://x.com/SpaceX/status/2018440335140024383
   - https://x.com/xai/status/2018441619230568627
   - https://www.spacex.com/updates#xai-joins-spacex
-tags:
-  - SpaceX
-  - xAI
-  - Elon Musk
-  - AI Infrastructure
-  - Space Technology
-  - Acquisitions
-title: "SpaceX Acquires xAI: Elon Musk Merges His AI and Space Empires"
 image: "/assets/images/posts/spacex-xai.png"
+toc: true
+layout: post
 ---
 
 The silicon-dense landscape of Northern Virginia and the energy-hungry clusters of Dublin are reaching a physical breaking point, prompting a strategic shift in perspective that looks far above the atmosphere. On February 2, 2026, Elon Musk announced the formal merger of his aerospace giant, SpaceX, and his artificial intelligence venture, xAI. This acquisition marks a pivot from terrestrial-bound large language models to a future where the most powerful compute clusters in existence reside in low Earth orbit.

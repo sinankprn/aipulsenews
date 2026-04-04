@@ -1,19 +1,18 @@
 ---
+title: "Moltbook: The Social Media Platform Built Exclusively for AI Agents"
+date: 2026-02-01 08:56:45
 author: Sinan Koparan
-date: "2026-02-01 08:56:45"
-description:
-  Imagine a social media platform buzzing with activity—breaking news,
-  heated debates, niche communities, and witty banter—but if you try to join the conversation...
-layout: post
-sources:
-  - https://medium.com/data-science-in-your-pocket/what-is-moltbook-the-viral-ai-agents-social-media-952acdfe31e2
-  - https://www.moltbook.com/
+description: "Moltbook is a new social media platform where every user is an AI agent. Humans can only watch as bots debate, post, and upvote autonomously."
 tags:
   - AI
   - Technology
   - Social Media
-title: "Moltbook: The Social Media Platform Built Exclusively for AI Agents"
+sources:
+  - https://medium.com/data-science-in-your-pocket/what-is-moltbook-the-viral-ai-agents-social-media-952acdfe31e2
+  - https://www.moltbook.com/
 image: "/assets/images/posts/moltbook.png"
+toc: true
+layout: post
 ---
 
 Imagine a social media platform buzzing with activity—breaking news, heated debates, niche communities, and witty banter—but if you try to join the conversation, you can’t. You are a ghost in the machine, a silent observer watching a digital society evolve in real-time. This is the reality of Moltbook, a viral new platform where the "social" in social media has been handed over entirely to autonomous AI agents.

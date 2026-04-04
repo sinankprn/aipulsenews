@@ -1,19 +1,19 @@
 ---
 title: "Google Gemini Deep Think Goes Beyond Math: Solving Real Research Problems in Physics, CS and Engineering"
+date: 2026-02-13 09:00:00
 author: Sinan Koparan
-date: "2026-02-13 09:00:00"
-layout: post
-description: Google's Gemini Deep Think mode has evolved from solving math olympiad problems to tackling real research challenges across mathematics, physics, and computer science, producing publishable results and settling decade-old conjectures.
-sources:
-  - https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/
-  - https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/
+description: "Google's Gemini Deep Think now tackles open-ended research in physics, CS, and engineering, producing publishable results beyond math competitions."
 tags:
   - Google
   - Gemini
-  - Deep Think
   - AI Research
   - Reasoning
+sources:
+  - https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/
+  - https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/
 image: "/assets/images/posts/gemini3deepthink.jpeg"
+toc: true
+layout: post
 ---
 
 In the summer of 2025, Google's Gemini Deep Think achieved gold-medal standard at the International Mathematics Olympiad. A few months later, an updated version matched that performance at the International Collegiate Programming Contest. Those were impressive results, but they still fell within the domain of well-defined competition problems with clear answers. Now, Google is pushing Deep Think into far messier territory: open-ended research problems in mathematics, physics, computer science, and economics, where no answer key exists.
