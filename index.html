@@ -5,7 +5,16 @@ pagination:
   enabled: true
 ---
 
-{% if paginator.page == 1 %}
+{% assign is_first_page = false %}
+{% if paginator %}
+  {% if paginator.page == 1 %}{% assign is_first_page = true %}{% endif %}
+  {% assign all_posts = paginator.posts %}
+{% else %}
+  {% assign is_first_page = true %}
+  {% assign all_posts = site.posts %}
+{% endif %}
+
+{% if is_first_page %}
 {% assign featured = site.posts.first %}
 {% if featured %}
 <section class="hero-section" aria-label="Featured article">
@@ -48,16 +57,16 @@ pagination:
 {% include ad-unit.html slot="YOUR_AD_SLOT_2" format="horizontal" %}
 {% endif %}
 
-{% if paginator.page == 1 %}
-  {% assign posts_to_show = paginator.posts | slice: 1, paginator.per_page %}
+{% if is_first_page %}
+  {% assign posts_to_show = all_posts | slice: 1, 100 %}
 {% else %}
-  {% assign posts_to_show = paginator.posts %}
+  {% assign posts_to_show = all_posts %}
 {% endif %}
 
 {% if posts_to_show.size > 0 %}
 <section class="posts-section" aria-label="Recent articles">
   <header class="section-header">
-    <h2 class="section-title"><span aria-hidden="true">&#x1F4F0;</span> {% if paginator.page == 1 %}Recent Stories{% else %}Stories &mdash; Page {{ paginator.page }}{% endif %}</h2>
+    <h2 class="section-title"><span aria-hidden="true">&#x1F4F0;</span> {% if is_first_page %}Recent Stories{% else %}Stories &mdash; Page {{ paginator.page }}{% endif %}</h2>
   </header>
 
   <div class="posts-grid" role="list">
@@ -99,7 +108,7 @@ pagination:
 </section>
 {% endif %}
 
-{% if paginator.total_pages > 1 %}
+{% if paginator and paginator.total_pages > 1 %}
 <nav class="pagination" aria-label="Page navigation">
   {% if paginator.previous_page %}
   <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn pagination-prev" aria-label="Previous page">&larr; Newer</a>
