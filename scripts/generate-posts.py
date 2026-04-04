@@ -79,23 +79,86 @@ def fetch_source_html(url: str) -> str:
         return ""
 
 
-def fetch_all_sources(sources: list[str]) -> str:
-    """Fetch HTML from all source URLs and combine."""
+def extract_og_image(html: str) -> str:
+    """Extract Open Graph image URL from HTML."""
+    patterns = [
+        r'<meta\s+property=["\']og:image["\']\s+content=["\'](https?://[^"\']+)["\']',
+        r'<meta\s+content=["\'](https?://[^"\']+)["\']\s+property=["\']og:image["\']',
+        r'<meta\s+name=["\']twitter:image["\']\s+content=["\'](https?://[^"\']+)["\']',
+        r'<meta\s+content=["\'](https?://[^"\']+)["\']\s+name=["\']twitter:image["\']',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, html, re.IGNORECASE)
+        if match:
+            return match.group(1)
+    return ""
+
+
+def download_image(url: str, slug: str) -> str:
+    """Download an image from URL and save locally. Returns relative path or empty string."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=15, stream=True)
+        resp.raise_for_status()
+
+        content_type = resp.headers.get("Content-Type", "")
+        if "jpeg" in content_type or "jpg" in content_type:
+            ext = "jpg"
+        elif "png" in content_type:
+            ext = "png"
+        elif "webp" in content_type:
+            ext = "webp"
+        elif url.lower().endswith((".jpg", ".jpeg")):
+            ext = "jpg"
+        elif url.lower().endswith(".png"):
+            ext = "png"
+        elif url.lower().endswith(".webp"):
+            ext = "webp"
+        else:
+            ext = "jpg"
+
+        images_dir = Path(__file__).parent.parent / "assets" / "images" / "posts"
+        images_dir.mkdir(parents=True, exist_ok=True)
+        filename = f"{slug}.{ext}"
+        filepath = images_dir / filename
+
+        with open(filepath, "wb") as f:
+            for chunk in resp.iter_content(8192):
+                f.write(chunk)
+
+        # Verify it's a valid image and reasonable size
+        if filepath.stat().st_size < 5000:
+            filepath.unlink()
+            return ""
+
+        print(f"    Downloaded source image: {filename}")
+        return f"/assets/images/posts/{filename}"
+    except Exception as e:
+        print(f"    Could not download image: {e}")
+        return ""
+
+
+def fetch_all_sources(sources: list[str]) -> tuple[str, str]:
+    """Fetch HTML from all source URLs. Returns (combined_html, best_image_url)."""
     parts = []
-    for url in sources[:3]:  # Limit to 3 sources to manage prompt size
+    best_image = ""
+    for url in sources[:3]:  # Limit to 3 sources
         print(f"    Fetching source: {url[:80]}...")
         html = fetch_source_html(url)
         if html:
             parts.append(f"--- SOURCE: {url} ---\n{html}\n--- END SOURCE ---")
-    return "\n\n".join(parts)
+            if not best_image:
+                img = extract_og_image(html)
+                if img:
+                    best_image = img
+    return "\n\n".join(parts), best_image
 
 
-def generate_article(topic: dict) -> str:
-    """Generate an article using Gemini."""
+def generate_article(topic: dict) -> tuple[str, str]:
+    """Generate an article using Gemini. Returns (article_text, source_image_url)."""
 
-    # Fetch actual source content
+    # Fetch actual source content and try to grab an OG image
     print("    Fetching source articles...")
-    source_html = fetch_all_sources(topic["sources"])
+    source_html, source_image = fetch_all_sources(topic["sources"])
 
     source_section = ""
     if source_html:
@@ -104,44 +167,42 @@ FULL SOURCE CONTENT (raw HTML from the source articles, extract the relevant inf
 {source_html}
 """
 
-    prompt = f"""You are a professional tech journalist writing for "AI Pulse", an AI news blog by Sinan Koparan, a PhD Candidate in Sports Data Science & AI.
-Write a well-researched, engaging article based on the following information.
+    prompt = f"""You are an AI journalist writing a news article for "AI Pulse", an automated AI news research site.
+
+Your job: synthesize the source material below into a clear, accurate, well-structured article. Stick closely to what the sources actually say. Do not invent quotes, statistics, or claims not present in the sources.
 
 HEADLINE: {topic['headline']}
 
-SOURCES TO REFERENCE:
+SOURCES:
 {chr(10).join(f"- {s}" for s in topic['sources'])}
 
-ANGLE/FOCUS: {topic['angle']}
+ANGLE: {topic['angle']}
 
-ADDITIONAL CONTEXT:
+NOTES:
 {topic['notes']}
 {source_section}
-REQUIREMENTS:
-1. Write in a professional but accessible tone, with confident expert analysis
-2. Start with a compelling hook, not "In the world of AI..." or similar cliches
-3. Include relevant context and background
-4. Explain technical concepts clearly for a general audience
-5. Be factual and balanced, avoid hype or speculation
-6. Keep it between 600-900 words
-7. Use subheadings (## Heading) to break up the content
-8. End with a forward-looking section about implications and what to watch for next
-9. Do NOT include the headline in the body, just the article content
-10. Cite sources where appropriate
-11. Do not use emdashes, use commas instead
-12. Naturally weave in expert perspective, e.g. "This aligns with broader trends in..." or "From a data science perspective..."
-13. At the very end, add a "## Frequently Asked Questions" section with exactly 3 Q&A pairs.
-    Format each as:
+WRITING RULES:
+1. Factual and precise. Every claim must trace back to the source material. If the sources disagree, note the disagreement.
+2. No filler. No "In today's rapidly evolving AI landscape..." or similar padding. Start with the news.
+3. Structure: open with the key development (who, what, when), then context/background, then analysis of why it matters, then what to watch next.
+4. Use ## subheadings to break the article into 3-4 clear sections.
+5. Keep it between 600-900 words.
+6. Explain technical terms when they first appear, but don't over-simplify for experts.
+7. Do NOT repeat the headline in the body.
+8. Do not use emdashes, use commas instead.
+9. Where the source material supports it, include specific numbers, dates, model names, or version numbers rather than vague references.
+10. End with a short "## What to Watch" section (2-3 sentences on next steps or open questions).
+11. After the article, add a "## Frequently Asked Questions" section with exactly 3 Q&A pairs. Base answers strictly on source material. Format:
     **Q: Question here?**
     A: Answer here.
 
-Write the article now:"""
+Write the article:"""
 
     response = client.models.generate_content(
-        model="gemini-3-flash-preview",
+        model="gemini-2.5-flash",
         contents=prompt
     )
-    return response.text
+    return response.text, source_image
 
 
 def parse_faq_from_content(content: str) -> tuple[str, list[dict]]:
@@ -273,7 +334,14 @@ def process_queue(drafts_only: bool = False):
         try:
             # Generate article
             print(f"  Generating article for: {topic['headline']}")
-            article = generate_article(topic)
+            article, source_image_url = generate_article(topic)
+
+            # Try to download source image if no image already set
+            slug = slugify(topic["headline"])
+            if source_image_url and not topic.get("image"):
+                downloaded = download_image(source_image_url, slug)
+                if downloaded:
+                    topic["image"] = downloaded
 
             # Create post
             post_path = create_post(topic, article, output_dir)
