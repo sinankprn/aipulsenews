@@ -1,0 +1,14 @@
+---
+angle: Cover the announcement, what it means for the industry, and how it compares
+  to competitors.
+headline: OpenAI’s Altman releases blueprint for taxing, regulating artificial intelligence
+image: /assets/images/posts/openais-altman-releases-blueprint-for-taxing-regul.png
+sources:
+- https://news.google.com/rss/articles/CBMihgFBVV95cUxPUnNWZ0hwN0dDQS1SSlFrODdMWjZmaVE3aUZUcWwweVBwcHY5RzZtcF9sUVdMY1JOdlBNRTAwM1lseVZNd1prdWk0LWd4cUtjTy1reVROSzRSREFoUFR5ZGpMWTBLWldIemdCYU45Q3prZkxobDFpYXkwa1lPcWdsdFllUHNoUdIBiwFBVV95cUxQZXV5aUV6Yk9BTjdyUzVxMm1rQndTRDFmY3Qzal95X0dMQkJudEpfZTlkakt0eGMxZUtvWEhrT2VJOGV1TlVuWF9oV2N6MnRwU2dSWUlvSHFxN1c4MDdBQmdxZEFjd1JjMHJxLUdaRm8waVBibG4xU2hUVEhhbUlqUk1Tb2E4ZFMyMzZB?oc=5
+- https://news.google.com/rss/articles/CBMihgFBVV95cUxPUnNWZ0hwN0dDQS1SSlFrODdMWjZmaVE3aUZUcWwweVBwcHY5RzZtcF9sUVdMY1JOdlBNRTAwM1lseVZNd1prdWk0LWd4cUtjTy1reVROSzRSREFoUFR5ZGpMWTBLWldIemdCYU45Q3prZkxobDFpYXkwa1lPcWdsdFllUHNoUdIBiwFBVV95cUxQZXV5aUV6Yk9BTjdyUzVxMm1rQndTRDFmY3Qzal95X0dMQkJudEpfZTlkakt0eGMxZUtvWEhrT2VJOGV1TlVuWF9oV2N6MnRwU2dSWUlvSHFxN1c4MDdBQmdxZEFjd1JjMHJxLUdaRm8waVBibG4xU2hUVEhhbUlqUk1Tb2E4ZFMyMzZB?oc=5
+tags:
+- AI
+- OpenAI
+---
+
+Auto-discovered trending AI news story. Found across 2 source(s).
