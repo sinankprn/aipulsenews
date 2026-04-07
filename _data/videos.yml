@@ -1,4 +1,11 @@
 - channel: Yannic Kilcher
+  published: '2026-04-07'
+  published_display: Apr 07, 2026
+  thumbnail: https://img.youtube.com/vi/TilDSWeiAlw/mqdefault.jpg
+  title: We all know bash sucks. Why make our agents suffer?
+  url: https://www.youtube.com/watch?v=TilDSWeiAlw
+  video_id: TilDSWeiAlw
+- channel: Yannic Kilcher
   published: '2026-04-06'
   published_display: Apr 06, 2026
   thumbnail: https://img.youtube.com/vi/stZr6U_7S90/mqdefault.jpg
@@ -75,10 +82,3 @@
   title: Google’s New AI Just Broke My Brain
   url: https://www.youtube.com/watch?v=7YVrb3-ABYE
   video_id: 7YVrb3-ABYE
-- channel: Yannic Kilcher
-  published: '2026-04-01'
-  published_display: Apr 01, 2026
-  thumbnail: https://img.youtube.com/vi/Wvj1mTqyzsQ/mqdefault.jpg
-  title: 'BREAKING: Claude Code source leaked'
-  url: https://www.youtube.com/watch?v=Wvj1mTqyzsQ
-  video_id: Wvj1mTqyzsQ
