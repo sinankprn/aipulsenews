@@ -1,0 +1,15 @@
+---
+angle: Cover the announcement, what it means for the industry, and how it compares
+  to competitors.
+headline: White House releases AI policy blueprint for Congress
+image: /assets/images/posts/white-house-releases-ai-policy-blueprint-for-congr.png
+sources:
+- https://news.google.com/rss/articles/CBMipgFBVV95cUxNeDUtN3VFS0RjZGtKR2J2bUU0cmk3QlFuOVZoWXpsNXo4ZnZ3UGpobnFWZmVrdEthUGJLN21nNVFmU2ZsZXZsbDhNZktJVkxPRTlhNWZsWW1lWG82V3VyX1I2THJzbTA4YjNDRWFGUHJlYVV1Mk5IMzd3Zk51NE9tZFNzWmJPLTRyWExsVTNydE1kMWc0cmhRb2E4b19zeXFSQ2x5cFB3?oc=5
+- https://news.google.com/rss/articles/CBMirwFBVV95cUxPU2E3X3Y5TVA4RHU2NlVkNUcyVnNSbkpiam56UGtrZTlqNnJDanFoZERvQzZjWU1qcUdIbDUwaWxyTGVnRXhWekp1VGt5Q3V3ZkZTaXh2OTVzNjVFVnNmZmhuN3ctdkducWU1WjItWnNJNHVGcERmb0Q2ZnBoSmJfNXZMYnVCa3N3RVFON1dpNW9Gb3ZMSHVLM0VHeUhTcUl5RjN4dUxOTWVFYlNKdk5N?oc=5
+- https://news.google.com/rss/articles/CBMiekFVX3lxTFB1b05hNElJb1RiYlBtd0RSamRiWEpWTXlVZzMtMVJYbzlJUjBkc01kZ1BHNVVvM3FDbkxMTlVoUGkwNEsyTE9oWXF3UnFKcmJnOGVHS1JueDVlQkZBZHoyQW9Pa2Q3bUZDR2lUVTFVOVVjVkhUbUtId3Nn0gF_QVVfeXFMT09UaXRLOU01c3B5dkNBM1JEV2g3T1V0cXBIVDdNSUFPOERIczNfMHNMR00xWHJtcGU5dTltbkFyMUFJWnRwT1RYdVhQbHBLczdfd2JkbGx4S1pxeHFmUXpSZjNsekpobmI0MEtZamVlN0Z4VTU4VHZ6UVB3eGhNMA?oc=5
+tags:
+- AI
+- Regulation
+---
+
+Auto-discovered trending AI news story. Found across 3 source(s).

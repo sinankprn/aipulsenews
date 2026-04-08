@@ -1,4 +1,11 @@
 - channel: Yannic Kilcher
+  published: '2026-04-08'
+  published_display: Apr 08, 2026
+  thumbnail: https://img.youtube.com/vi/aFcVKzfkJPk/mqdefault.jpg
+  title: Claude Mythos and the end of software
+  url: https://www.youtube.com/watch?v=aFcVKzfkJPk
+  video_id: aFcVKzfkJPk
+- channel: Yannic Kilcher
   published: '2026-04-07'
   published_display: Apr 07, 2026
   thumbnail: https://img.youtube.com/vi/TilDSWeiAlw/mqdefault.jpg
@@ -75,10 +82,3 @@
   title: I got DMCA'd by Anthropic (not a joke)
   url: https://www.youtube.com/watch?v=icu0GZcSb58
   video_id: icu0GZcSb58
-- channel: AI Jason
-  published: '2026-04-02'
-  published_display: Apr 02, 2026
-  thumbnail: https://img.youtube.com/vi/iB5POKmXfWY/mqdefault.jpg
-  title: How to build on-device AI with Gemma 4
-  url: https://www.youtube.com/watch?v=iB5POKmXfWY
-  video_id: iB5POKmXfWY
