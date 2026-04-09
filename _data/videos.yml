@@ -1,4 +1,11 @@
 - channel: Yannic Kilcher
+  published: '2026-04-09'
+  published_display: Apr 09, 2026
+  thumbnail: https://img.youtube.com/vi/3DNkDIVKtK8/mqdefault.jpg
+  title: Crashing out at Anthropic and getting Pi pilled
+  url: https://www.youtube.com/watch?v=3DNkDIVKtK8
+  video_id: 3DNkDIVKtK8
+- channel: Yannic Kilcher
   published: '2026-04-08'
   published_display: Apr 08, 2026
   thumbnail: https://img.youtube.com/vi/aFcVKzfkJPk/mqdefault.jpg
@@ -75,10 +82,3 @@
   title: Building android apps with Gemma 4 for AI coding assistance
   url: https://www.youtube.com/watch?v=4iPn1qRVsNY
   video_id: 4iPn1qRVsNY
-- channel: Yannic Kilcher
-  published: '2026-04-02'
-  published_display: Apr 02, 2026
-  thumbnail: https://img.youtube.com/vi/icu0GZcSb58/mqdefault.jpg
-  title: I got DMCA'd by Anthropic (not a joke)
-  url: https://www.youtube.com/watch?v=icu0GZcSb58
-  video_id: icu0GZcSb58
