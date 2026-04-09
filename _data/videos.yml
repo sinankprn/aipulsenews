@@ -5,6 +5,13 @@
   title: Crashing out at Anthropic and getting Pi pilled
   url: https://www.youtube.com/watch?v=3DNkDIVKtK8
   video_id: 3DNkDIVKtK8
+- channel: Computerphile
+  published: '2026-04-09'
+  published_display: Apr 09, 2026
+  thumbnail: https://img.youtube.com/vi/x_pwyoLsvkw/mqdefault.jpg
+  title: Oversampling Data (Explained with Audio) - Computerphile
+  url: https://www.youtube.com/watch?v=x_pwyoLsvkw
+  video_id: x_pwyoLsvkw
 - channel: Yannic Kilcher
   published: '2026-04-08'
   published_display: Apr 08, 2026
@@ -75,10 +82,3 @@
   title: How an A note became an A note
   url: https://www.youtube.com/watch?v=lcCDO7nvNyE
   video_id: lcCDO7nvNyE
-- channel: AI Jason
-  published: '2026-04-03'
-  published_display: Apr 03, 2026
-  thumbnail: https://img.youtube.com/vi/4iPn1qRVsNY/mqdefault.jpg
-  title: Building android apps with Gemma 4 for AI coding assistance
-  url: https://www.youtube.com/watch?v=4iPn1qRVsNY
-  video_id: 4iPn1qRVsNY
