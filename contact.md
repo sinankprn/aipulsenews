@@ -15,48 +15,12 @@ permalink: /contact/
     <div class="contact-content">
       <section class="contact-section">
         <h2>Get in Touch</h2>
-        <p>AI Pulse is committed to accurate, timely reporting on artificial intelligence news and developments. If you have a tip, correction, or feedback, we want to hear from you.</p>
-
-        <div class="contact-methods">
-          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="contact-method">
-            <span class="contact-icon">&#128187;</span>
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">@{{ site.author.github }}</span>
-          </a>
-
-          <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener" class="contact-method">
-            <span class="contact-icon">&#128038;</span>
-            <span class="contact-label">Twitter/X</span>
-            <span class="contact-value">@{{ site.author.twitter }}</span>
-          </a>
-
-          <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" class="contact-method">
-            <span class="contact-icon">&#128188;</span>
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">{{ site.author.name }}</span>
-          </a>
-
-          <a href="{{ site.author.url }}" target="_blank" rel="noopener" class="contact-method">
-            <span class="contact-icon">&#127760;</span>
-            <span class="contact-label">Website</span>
-            <span class="contact-value">{{ site.author.url | remove: 'https://' }}</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="contact-section">
-        <h2>Story Tips</h2>
-        <p>Have a breaking AI story or insider information? We protect our sources and investigate all credible tips. Reach out via any channel above.</p>
+        <p>AI Pulse is an automated research project. This site is currently paused and not actively monitored for correspondence.</p>
       </section>
 
       <section class="contact-section">
         <h2>Corrections</h2>
-        <p>Accuracy is our priority. If you spot an error in any of our articles, please let us know immediately. We review all correction requests and update articles promptly when warranted. See our <a href="{{ '/editorial/' | relative_url }}">Editorial Standards</a> for our corrections policy.</p>
-      </section>
-
-      <section class="contact-section">
-        <h2>Press & Partnerships</h2>
-        <p>For media inquiries, partnership opportunities, or interview requests, please reach out via LinkedIn or Twitter with details about your proposal.</p>
+        <p>If you spot an error in any article, see our <a href="{{ '/editorial/' | relative_url }}">Editorial Standards</a> for our corrections policy.</p>
       </section>
     </div>
   </article>
