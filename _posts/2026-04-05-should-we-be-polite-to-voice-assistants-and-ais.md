@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 13:59:52'
 description: Should we be polite to voice assistants and AIs? Explore the ethics of
   digital manners and why your treatment of technology might matter more than you

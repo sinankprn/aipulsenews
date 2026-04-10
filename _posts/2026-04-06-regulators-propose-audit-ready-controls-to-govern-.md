@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 14:14:01'
 description: Regulators propose audit-ready controls to govern AI and ensure accountability.
   See how these new standards will impact compliance and risk management.

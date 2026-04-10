@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 08:24:20'
 description: TUI-use lets AI agents control interactive terminal programs like REPLs
   and debuggers. Explore how this open-source tool bridges the gap for AI automation.

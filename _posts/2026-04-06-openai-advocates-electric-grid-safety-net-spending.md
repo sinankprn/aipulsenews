@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 19:56:13'
 description: OpenAI urges investment in the electric grid and social safety nets to
   support the new AI era. Discover why public infrastructure is key to future growth.

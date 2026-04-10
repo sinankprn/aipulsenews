@@ -1,7 +1,7 @@
 ---
 title: "OpenAI Retiring GPT-4o and GPT-4.1 on February 13: What Developers Need to Know"
 date: 2026-02-01 18:49:33
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "OpenAI will retire GPT-4o and GPT-4.1 on February 13, 2026. Here is what developers need to know about the timeline and migration path."
 tags:
   - OpenAI

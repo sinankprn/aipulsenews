@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 08:26:35'
 description: Streamline AI bot deployment with botctl, a process manager for autonomous
   AI agents. Features include a CLI, web UI, dashboard, and session management.

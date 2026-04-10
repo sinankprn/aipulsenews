@@ -274,7 +274,7 @@ def create_post(topic: dict, article_content: str, output_dir: Path) -> Path:
         "layout": "post",
         "title": topic["headline"],
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S %z").strip(),
-        "author": "Sinan Koparan",
+        "author": "AI Pulse Staff",
         "tags": topic["tags"],
         "sources": topic["sources"],
         "description": description,

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 14:16:34'
 description: Is Google using my email messages to train AI? We explore privacy policies
   to reveal what happens to your Gmail data and show you how to protect your privacy.

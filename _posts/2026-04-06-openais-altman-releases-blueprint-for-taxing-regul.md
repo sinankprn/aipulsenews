@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 19:59:07'
 description: OpenAI CEO Sam Altman unveils a blueprint for taxing and regulating artificial
   intelligence. Learn how this plan will shape the future of AI governance.

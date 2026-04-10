@@ -7,19 +7,9 @@ lang: en
 
 # Author
 author:
-  name: "Sinan Koparan"
-  url: "https://sinankprn.com"
-  github: "sinankprn"
-  twitter: "sinankprn"
-  linkedin: "sinankprn"
-  bio: "PhD Candidate in Sports Data Science & AI"
-  full_bio: "Sinan Koparan is a PhD Candidate specialising in Sports Data Science and Artificial Intelligence. With expertise in machine learning, LLMs, and data-driven sports analytics, he bridges the gap between cutting-edge AI research and practical applications."
-  expertise:
-    - "Artificial Intelligence"
-    - "Machine Learning"
-    - "Sports Data Science"
-    - "Large Language Models"
-  image: "/assets/images/sinan-koparan.png"
+  name: "AI Pulse Staff"
+  bio: "Editorial team covering AI news and research"
+  full_bio: "AI Pulse Staff is the editorial team behind AI Pulse, covering daily developments in artificial intelligence, machine learning, and LLMs."
 
 # SEO Keywords
 keywords:
@@ -59,13 +49,10 @@ pagination:
 logo: /assets/images/icons/web-app-manifest-512x512.png
 image: /assets/images/icons/web-app-manifest-512x512.png
 twitter:
-  username: sinankprn
   card: summary_large_image
 
 # Social Links
 social:
-  website: "https://sinankprn.com"
-  github: "https://github.com/sinankprn"
 
 # Default front matter
 defaults:
@@ -74,7 +61,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Sinan Koparan"
+      author: "AI Pulse Staff"
 
 # Google AdSense
 # Replace with your AdSense publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
@@ -84,7 +71,7 @@ adsense:
 
 # Newsletter popup
 newsletter:
-  popup_enabled: true
+  popup_enabled: false
 
 # Exclude from build
 exclude:

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 20:02:34'
 description: MegaTrain enables full precision training of 100B+ parameter LLMs on
   a single GPU. Learn how this memory-centric system is revolutionizing AI development.

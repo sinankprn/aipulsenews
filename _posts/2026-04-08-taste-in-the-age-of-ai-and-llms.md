@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 08:19:10'
 description: As AI floods the web with generic content, human judgment is vital. Discover
   why taste in the age of AI and LLMs is the key differentiator for creators.

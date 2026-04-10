@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 20:04:40'
 description: Accelerate AI development with Claude Managed Agents. Use these cloud-hosted,
   composable APIs to build and deploy production agents up to 10 times faster.

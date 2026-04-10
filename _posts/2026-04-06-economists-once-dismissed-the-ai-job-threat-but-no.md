@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 08:27:03'
 description: Economists are sounding the alarm as the consensus on the AI job threat
   shifts. Discover why experts are no longer dismissing the risk to global jobs.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 20:06:49'
 description: Nebius is in talks to buy Israeli AI startup AI21 following a failed
   Nvidia deal. Discover how this major acquisition reshapes the AI innovation landscape.

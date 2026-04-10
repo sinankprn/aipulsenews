@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 14:01:45'
 description: Microsoft Copilot is for entertainment purposes only and not for serious
   use. Learn why the firm says you should not rely on the AI for important advice.

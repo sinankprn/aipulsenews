@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 19:42:09'
 description: What happens when you ask AI to build a video game? Explore the strange
   results of this experiment and see how AI is transforming the future of game developm...

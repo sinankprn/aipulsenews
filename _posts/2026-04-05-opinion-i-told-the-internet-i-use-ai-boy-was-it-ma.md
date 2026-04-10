@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 19:41:01'
 description: One author faced massive backlash after telling the internet they use
   AI. Explore the intense public anger and the controversy over artificial intelligence.

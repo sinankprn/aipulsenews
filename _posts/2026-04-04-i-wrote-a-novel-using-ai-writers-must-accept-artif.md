@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 13:59:32'
 description: Writing a novel using AI is a landmark case study for creators. Stephen
   Marche shares his journey and explains why human writers are as valuable as ever.

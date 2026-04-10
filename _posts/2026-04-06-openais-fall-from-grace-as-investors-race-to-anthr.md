@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 08:28:29'
 description: See why investors are racing to Anthropic as OpenAI faces a shocking
   fall from grace. Explore how this massive capital shift is reshaping the AI industry.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 08:29:12'
 description: GuppyLM is a tiny 9M parameter AI project designed to demystify how language
   models work. Explore the open source code on GitHub and start learning today.

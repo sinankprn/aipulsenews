@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 08:26:15'
 description: Experience Gemma Gem, the local AI model running in your browser. Run
   Google's Gemma with no API keys or cloud dependence for private AI via WebGPU tech.

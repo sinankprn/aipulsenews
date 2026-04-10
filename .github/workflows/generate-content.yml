@@ -1,11 +1,11 @@
 name: Generate AI News Content
 
 on:
-  # Run three times daily for maximum content output
-  schedule:
-    - cron: '0 7,13,19 * * *'
+  # Paused — schedule disabled. Re-enable by uncommenting the cron below.
+  # schedule:
+  #   - cron: '0 7,13,19 * * *'
 
-  # Allow manual trigger
+  # Manual trigger only while paused
   workflow_dispatch:
 
 permissions:

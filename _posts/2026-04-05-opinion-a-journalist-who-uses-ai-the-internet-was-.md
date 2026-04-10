@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 14:03:28'
 description: Discover why the internet erupted after a journalist who uses AI shared
   their story. Read about the friction as AI technology intersects with human roles.

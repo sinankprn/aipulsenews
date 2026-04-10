@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 07:58:46'
 description: Anthropic acquires Dimension-backed Coefficient Bio in a massive $400M
   stock deal. Learn how this merger signals rapid consolidation in the AI industry.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 20:04:05'
 description: Anthropic claims its new Mythos AI model is a cybersecurity reckoning.
   Learn how this powerful technology will transform the future of digital security.

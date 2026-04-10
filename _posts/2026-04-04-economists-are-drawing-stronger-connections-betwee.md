@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 13:58:44'
 description: Leading economists are identifying measurable connections between AI
   and jobs. Discover how generative AI is reshaping global employment structures today.

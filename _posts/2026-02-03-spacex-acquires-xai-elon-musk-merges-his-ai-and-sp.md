@@ -1,7 +1,7 @@
 ---
 title: "SpaceX Acquires xAI: Elon Musk Merges His AI and Space Empires"
 date: 2026-02-03 00:08:44
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "SpaceX formally acquires xAI, merging Musk's aerospace and AI ventures to build orbital data centers powered by solar energy and Starship logistics."
 tags:
   - SpaceX

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 08:20:36'
 description: Sam Altman calls for a New Deal for AI superintelligence, but critics
   argue OpenAI's policies are regulatory nihilism. Explore the future of AI governance.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 08:18:02'
 description: Discover why Claude Code is unusable for complex engineering tasks following
   the February updates. We analyze user reports of logic errors and failed fixes.

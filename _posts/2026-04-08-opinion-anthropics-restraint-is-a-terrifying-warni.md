@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 08:20:35'
 description: Anthropic’s restraint in AI development may seem safe, but it is actually
   a terrifying warning sign. Discover what this cautious stance really means.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 14:49:49'
 description: Discover Hippo, a biologically inspired memory for AI agents. This zero
   dependency system uses decay and consolidation to give your AI human-like memory.

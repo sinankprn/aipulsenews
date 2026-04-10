@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 08:25:30'
 description: Explore how artificial intelligence and biology are launching a novel
   era for health and medicine. Discover the future of medical breakthroughs today.

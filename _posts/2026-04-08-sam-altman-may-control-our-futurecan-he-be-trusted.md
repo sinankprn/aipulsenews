@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 14:53:48'
 description: Explore the rising influence of Sam Altman in the AI industry. Can he
   be trusted with our future? Dive into our analysis of power and public confidence.

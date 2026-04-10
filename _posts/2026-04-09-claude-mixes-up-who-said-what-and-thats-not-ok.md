@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 15:01:25'
 description: A serious Anthropic Claude bug causes the AI to misattribute its own
   messages as user input. Learn why experts call this the worst bug seen in an LLM.

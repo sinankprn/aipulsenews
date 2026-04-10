@@ -55,7 +55,7 @@ permalink: /editorial/
           <li><strong>Publishing:</strong> Content is published automatically via GitHub Actions without human review of individual articles.</li>
           <li><strong>Source attribution:</strong> Every article includes links to the original source material so readers can verify claims independently.</li>
         </ul>
-        <p>This site is maintained by <a href="https://sinankprn.com" target="_blank" rel="noopener">Sinan Koparan</a> as a research project exploring automated AI journalism. The pipeline code, prompts, and infrastructure are human-designed, but the article content itself is machine-generated. Readers should treat articles as AI-produced summaries and always consult the linked sources for authoritative information.</p>
+        <p>This site is a research project exploring automated AI journalism. The pipeline code, prompts, and infrastructure are human-designed, but the article content itself is machine-generated. Readers should treat articles as AI-produced summaries and always consult the linked sources for authoritative information.</p>
         <p><strong>We do not claim human editorial oversight over individual articles.</strong> If you spot factual errors, please <a href="{{ '/contact/' | relative_url }}">contact us</a> and we will correct or remove the article.</p>
       </section>
 

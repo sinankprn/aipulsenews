@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 07:59:26'
 description: Explore the LLM Wiki, an innovative idea file by Karpathy. Learn how
   this viral GitHub resource helps organize insights for the evolving AI landscape.

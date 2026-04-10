@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 14:49:35'
 description: Bryson DeChambeau leads the acquisition of Seattle-area startup Sportsbox
   AI. See how their 3D motion analysis tech is revolutionizing the future of golf.

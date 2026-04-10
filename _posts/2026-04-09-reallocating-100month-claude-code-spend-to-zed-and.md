@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 20:05:16'
 description: Maximize your budget by reallocating your Claude Code spend to Zed and
   OpenRouter. Learn how this shift offers better flexibility and avoids rate limits.

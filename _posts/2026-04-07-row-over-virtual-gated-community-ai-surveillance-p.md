@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 14:51:10'
 description: Residents are divided over a new Toronto AI surveillance plan to create
   a virtual gated community. Find out how this technology impacts privacy and safety.

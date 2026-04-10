@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 14:52:33'
 description: Are we overestimating AI's abilities? A new study reveals how current
   model testing methods may be flawed and why popular benchmarks are often misleading.

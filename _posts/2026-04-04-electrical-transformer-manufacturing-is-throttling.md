@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 19:38:41'
 description: The AI revolution faces a major roadblock. See how electrical transformer
   manufacturing delays are throttling the power grid and our electrified future.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 14:48:08'
 description: Is the new Copilot app for Windows 11 actually just Microsoft Edge? Explore
   the recent discovery that reveals how Microsoft is integrating its AI assistant.

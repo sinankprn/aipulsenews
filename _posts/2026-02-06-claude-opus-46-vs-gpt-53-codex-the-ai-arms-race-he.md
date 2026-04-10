@@ -1,7 +1,7 @@
 ---
 title: "Claude Opus 4.6 vs GPT-5.3 Codex: The AI Arms Race Heats Up"
 date: 2026-02-06 04:20:03
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "Anthropic's Claude Opus 4.6 and OpenAI's GPT-5.3 Codex launch in the same week, marking a new chapter in the frontier model competition."
 tags:
   - Claude

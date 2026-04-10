@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 15:03:47'
 description: Looking to invest $5,000 in artificial intelligence (AI) stocks after
   the Nasdaq correction? Discover three top picks poised for significant growth today.

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "About Sinan Koparan"
-description: "Learn about Sinan Koparan, PhD Candidate in Sports Data Science & AI, creator of AI Pulse."
+title: "About AI Pulse"
+description: "AI Pulse is an editorial project covering daily AI news and research."
 permalink: /about/
 ---
 

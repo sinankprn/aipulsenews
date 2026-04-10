@@ -1,7 +1,7 @@
 ---
 title: "Google Gemini Deep Think Goes Beyond Math: Solving Real Research Problems in Physics, CS and Engineering"
 date: 2026-02-13 09:00:00
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "Google's Gemini Deep Think now tackles open-ended research in physics, CS, and engineering, producing publishable results beyond math competitions."
 tags:
   - Google

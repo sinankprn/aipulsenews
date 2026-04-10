@@ -1,7 +1,7 @@
 ---
 title: "xAI Unveils Grok Imagine 1.0: A High-Speed Leap in Generative Video and Audio"
 date: 2026-02-02 04:40:10
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "xAI launches Grok Imagine 1.0, a new generative model for video and audio creation that pushes the speed boundaries of AI media generation."
 tags:
   - xAI

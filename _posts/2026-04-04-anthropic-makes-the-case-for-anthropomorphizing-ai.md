@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 19:39:06'
 description: Explore Anthropic’s unsettling research on anthropomorphizing AI. See
   why giving bots human traits could be the key to building safer, more useful systems.
@@ -52,7 +52,7 @@ This is particularly concerning in the context of AI safety. If an AI can persua
 
 The implications of this research are already leaking into various industries. In customer service, an AI that can apologize "sincerely" using a first-person persona can de-escalate a frustrated customer much faster than a standard bot. In the field of education, an AI tutor that acts as a "supportive mentor" can increase student engagement and retention by providing a sense of social accountability.
 
-In Sinan Koparan’s specialized field of sports data science and AI, the application of anthropomorphism is particularly interesting. An AI-driven athletic trainer that says, "I’m worried you’re overtraining today, let’s take it easy," is likely to be much more persuasive to an athlete than a dashboard that simply displays a red warning light. By wrapping complex data in a human-like "voice," the AI can translate high-level metrics into actionable behavior change, bridging the gap between raw data and human performance.
+In the specialized field of sports data science and AI, the application of anthropomorphism is particularly interesting. An AI-driven athletic trainer that says, "I’m worried you’re overtraining today, let’s take it easy," is likely to be much more persuasive to an athlete than a dashboard that simply displays a red warning light. By wrapping complex data in a human-like "voice," the AI can translate high-level metrics into actionable behavior change, bridging the gap between raw data and human performance.
 
 ## A Forward-Looking Strategy for Transparency
 

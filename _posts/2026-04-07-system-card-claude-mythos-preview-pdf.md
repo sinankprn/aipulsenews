@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 20:00:20'
 description: Explore the newly discovered Claude Mythos Preview system card from Anthropic's
   CDN. Get technical insights from this exclusive AI safety PDF document.

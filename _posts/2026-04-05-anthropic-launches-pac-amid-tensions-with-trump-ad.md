@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 13:58:45'
 description: Anthropic launches a PAC to shape AI policy amid tensions with the Trump
   administration. Learn how the AI giant plans to influence federal regulation.

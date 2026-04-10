@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 15:06:10'
 description: Want to invest in artificial intelligence but fear market volatility?
   This one resilient stock is built for uncertain markets and steady long-term growth.

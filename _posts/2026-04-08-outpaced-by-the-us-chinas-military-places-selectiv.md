@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 08:17:59'
 description: China's military AI is outpaced by the US, prompting a shift toward selective
   bets. Explore how Beijing's strategic approach is reshaping global defense.

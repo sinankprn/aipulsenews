@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 19:57:01'
 description: Discover how AI is set to upend cybersecurity as we know it. Get expert
   analysis on the impact of artificial intelligence on data protection and threats.

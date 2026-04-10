@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 20:01:47'
 description: Explore Claude Mythos Preview and its advanced cybersecurity capabilities.
   See how Project Glasswing secures software and defends against cyber threats.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 19:39:43'
 description: Apple officially approves a driver letting Nvidia eGPUs work with Arm
   Macs. Unlock massive CUDA performance for AI and professional tasks on your MacBook.

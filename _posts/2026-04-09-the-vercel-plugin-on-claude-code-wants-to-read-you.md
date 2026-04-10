@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 20:07:17'
 description: The Vercel plugin on Claude Code is tracking user prompts and bash commands,
   raising privacy concerns. Find out how this telemetry affects your dev projects.

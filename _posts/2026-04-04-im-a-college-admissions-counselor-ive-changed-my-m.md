@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 13:57:26'
 description: Discover why a college admissions counselor changed their mind about
   students using ChatGPT. See how AI can help refine and improve application essays.
@@ -17,11 +17,7 @@ faq:
     demonstrate maturity and integrity.
 
 
-    ***
-
-
-    *Sinan Koparan is a PhD Candidate in Sports Data Science & AI, exploring the intersection
-    of technology, human performance, and predictive analytics.*'
+    ***'
   q: Should I disclose if I used AI to help edit my essay?
 image: /assets/images/posts/im-a-college-admissions-counselor-ive-changed-my-m.png
 layout: post

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 19:38:11'
 description: Escape pay-per-token pricing with sllm. Split a GPU node with other developers
   for unlimited tokens and cheaper inference. See how it works and save today.
@@ -43,7 +43,7 @@ sllm occupies the middle ground. By grouping users into "cohorts," the platform 
 
 The platform offers access to a sophisticated roster of open-weights models, including DeepSeek-v3.2, Qwen-3.5, and even early-stage references to next-generation architectures like Llama-4-scout. For a monthly fee ranging from $10 to $40, users gain access to throughput levels typically between 15 and 35 tokens per second.
 
-From a data science perspective, this setup is particularly advantageous for batch processing and "long-context" tasks. In fields like sports analytics, where Sinan Koparan and other researchers often process thousands of game events or player trajectories simultaneously, token-based pricing can become a logistical nightmare. Having a fixed throughput on a shared node allows a researcher to saturate their "lane" of the GPU 24/7 without worrying about a ballooning invoice at the end of the month. 
+From a data science perspective, this setup is particularly advantageous for batch processing and "long-context" tasks. In fields like sports analytics, where researchers often process thousands of game events or player trajectories simultaneously, token-based pricing can become a logistical nightmare. Having a fixed throughput on a shared node allows a researcher to saturate their "lane" of the GPU 24/7 without worrying about a ballooning invoice at the end of the month. 
 
 However, the trade-off is availability. Unlike a dedicated instance, a shared node means that if all members of a cohort attempt to burst their usage at the exact same microsecond, latency may fluctuate. The sllm interface accounts for this by allowing users to filter cohorts by "availability percentage," giving developers the ability to choose between high-uptime stability and lower-cost experimentation.
 

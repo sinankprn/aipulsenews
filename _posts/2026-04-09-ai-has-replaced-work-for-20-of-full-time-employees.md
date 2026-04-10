@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 20:06:13'
 description: New survey data shows AI has replaced work for 20% of full-time employees
   in the U.S. Discover how automation is reshaping the workforce and your career.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 08:00:07'
 description: Learn how A.I. helped two brothers build a $1.8 billion company. See
   the secrets behind their rapid growth, innovative tools and entrepreneurial success.

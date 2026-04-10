@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 08:17:34'
 description: China and the US are winning different segments of the global AI race.
   Discover the unique strengths of both nations and see who might pull ahead next.

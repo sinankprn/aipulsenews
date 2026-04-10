@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 08:21:19'
 description: Nvidia's AI chips require high-performance memory to thrive. Learn why
   the Micron sell-off is a mistake and why memory remains the backbone of AI success.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 20:02:38'
 description: Broadcom secures expanded chip deals with Google and Anthropic to fuel
   AI growth. See how these strategic partnerships shape the future of AI hardware.

@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 14:51:49'
 description: The White House released an AI policy blueprint for Congress. Discover
   how this federal strategy aims to manage the future of advanced AI technologies.

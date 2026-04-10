@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 07:56:09'
 description: Anthropic is ending OpenClaw access for Claude Code subscriptions on
   April 4. Discover what this major shift means for the future of AI compute limits.
@@ -47,7 +47,7 @@ While capacity management is the stated reason, industry analysts are also looki
 
 This strategy mirrors the "walled garden" approaches seen in previous tech cycles. If a developer can use Claude’s most advanced models "for free" within Anthropic’s own command line interface but has to pay per token to use an open source alternative, the choice for the average user becomes a matter of economics rather than just features. This raises questions about the future of open source AI orchestration. If model providers can effectively tax the use of third party tools by changing their Terms of Service, the "wrapper" economy may face a difficult road ahead.
 
-As Sinan Koparan often discusses in the context of Sports Data Science, the efficiency of data processing is paramount. When an AI company begins to "throttle" or change the billing of high density usage, it suggests that the underlying cost of compute is still a massive hurdle that hasn't been fully solved by optimizations or hardware advancements.
+In the context of data-intensive fields like sports data science, the efficiency of data processing is paramount. When an AI company begins to "throttle" or change the billing of high density usage, it suggests that the underlying cost of compute is still a massive hurdle that hasn't been fully solved by optimizations or hardware advancements.
 
 ## The Tragedy of the Metered Commons
 

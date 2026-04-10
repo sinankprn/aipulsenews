@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 07:54:07'
 description: See how emotion concepts and their function in a large language model
   go beyond mimicry. Anthropic research reveals neural patterns in Claude Sonnet 4.5.

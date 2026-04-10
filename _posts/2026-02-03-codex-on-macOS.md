@@ -1,7 +1,7 @@
 ---
 title: "OpenAI Launches Codex App for macOS: A Command Center for Agent-Driven Development"
 date: 2026-02-03 09:00:00
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "OpenAI releases the Codex desktop app for macOS, letting developers orchestrate multiple AI coding agents in parallel with Skills and Automations."
 tags:
   - OpenAI

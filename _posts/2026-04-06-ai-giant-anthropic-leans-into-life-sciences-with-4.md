@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 19:57:57'
 description: Anthropic moves into life sciences with a $400M deal for Coefficient
   Bio. Discover how this AI giant is set to revolutionize biotech and medical research.

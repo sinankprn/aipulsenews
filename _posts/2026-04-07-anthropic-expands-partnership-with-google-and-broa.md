@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 08:19:35'
 description: Anthropic expands partnership with Google and Broadcom to secure multiple
   gigawatts of next-generation TPU compute capacity. See how this scales Claude AI.

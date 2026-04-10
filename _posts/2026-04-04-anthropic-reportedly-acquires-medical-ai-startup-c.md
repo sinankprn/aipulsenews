@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 07:55:19'
 description: Anthropic acquires Coefficient Bio in a $400M+ deal, marking its largest
   acquisition yet. Learn why this move into medical AI is a game changer for Claude.

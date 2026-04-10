@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 19:39:43'
 description: Discover Nanocode, the best Claude Code that $200 can buy. Built in pure
   JAX for TPUs, this library offers a high-value solution for end-to-end training.

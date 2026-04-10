@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 20:01:56'
 description: Waiting for Anthropic support to respond? One user reports a month-long
   silence over $180 in extra charges. See why automated help systems are failing.

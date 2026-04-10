@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 15:00:18'
 description: The Nasdaq is in correction territory. Discover which two Artificial
   Intelligence (AI) stocks are top picks to buy now as valuations become attractive.

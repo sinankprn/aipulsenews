@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-06 14:14:29'
 description: Does coding with LLMs lead to more microservices? Ben Borgers examines
   how AI tools are driving a shift toward smaller, more modular software architecture.

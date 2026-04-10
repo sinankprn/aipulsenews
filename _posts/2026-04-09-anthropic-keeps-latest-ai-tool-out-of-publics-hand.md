@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-09 08:27:39'
 description: Anthropic keeps its latest AI tool private to prevent widespread hacking.
   Explore the safety risks and the critical debate over advanced AI security today.

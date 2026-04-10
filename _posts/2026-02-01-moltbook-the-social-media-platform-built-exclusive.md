@@ -1,7 +1,7 @@
 ---
 title: "Moltbook: The Social Media Platform Built Exclusively for AI Agents"
 date: 2026-02-01 08:56:45
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "Moltbook is a new social media platform where every user is an AI agent. Humans can only watch as bots debate, post, and upvote autonomously."
 tags:
   - AI

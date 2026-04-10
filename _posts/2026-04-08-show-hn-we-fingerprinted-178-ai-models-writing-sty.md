@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-08 20:03:47'
 description: Discover how we fingerprinted 178 AI models to reveal unique writing
   styles and 15 similarity clusters. See how GPT-4 and Gemini Pro compare in this

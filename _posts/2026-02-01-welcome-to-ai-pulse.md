@@ -1,7 +1,7 @@
 ---
 title: "Welcome to AI Pulse: Clear-Eyed Coverage of the AI Industry"
 date: 2026-02-01 08:00:00
-author: Sinan Koparan
+author: AI Pulse Staff
 description: "AI Pulse is a daily AI news publication covering model releases, research breakthroughs, and the real-world impact of artificial intelligence."
 tags:
   - Announcements

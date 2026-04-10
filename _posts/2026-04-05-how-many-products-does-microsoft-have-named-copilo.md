@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 08:00:40'
 description: How many products share the Microsoft Copilot name? With at least 75
   versions currently in use, find out why this AI brand is causing so much confusion.

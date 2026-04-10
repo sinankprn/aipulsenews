@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-05 19:40:03'
 description: Run Google Gemma 4 locally with LM Studio's new lms headless CLI. See
   how to integrate this powerful model with Claude Code for a faster local AI workflow.

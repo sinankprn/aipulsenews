@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-07 14:49:10'
 description: Protect your retirement savings during the Artificial Intelligence (AI)
   sell-off. Learn expert strategies to keep your portfolio on track and secure.

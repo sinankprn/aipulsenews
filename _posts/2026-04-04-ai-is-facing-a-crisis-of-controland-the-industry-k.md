@@ -1,5 +1,5 @@
 ---
-author: Sinan Koparan
+author: AI Pulse Staff
 date: '2026-04-04 14:00:30'
 description: Silicon Valley is admitting that AI is facing a crisis of control. Learn
   why the industry is shifting from blind optimism to address urgent safety risks.
